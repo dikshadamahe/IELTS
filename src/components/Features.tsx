@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Headphones, Mic, BookOpen, Users } from "lucide-react";
 import FeatureCard from "./FeatureCard";
 
@@ -29,8 +30,25 @@ const features = [
 ];
 
 const Features = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
   return (
-    <section id="features" className="py-20 sm:py-28 lg:py-32 bg-cool-gray-light">
+    <motion.section
+      id="features"
+      className="py-20 sm:py-28 lg:py-32 bg-cool-gray-light"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-deep-royal-blue">
@@ -52,7 +70,7 @@ const Features = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

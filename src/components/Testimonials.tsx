@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import TestimonialCard from "./TestimonialCard";
 
 const testimonials = [
@@ -25,8 +26,25 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
   return (
-    <section id="testimonials" className="py-20 sm:py-28 lg:py-32 bg-white">
+    <motion.section
+      id="testimonials"
+      className="py-20 sm:py-28 lg:py-32 bg-white"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-deep-royal-blue">
@@ -49,7 +67,7 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,8 +1,28 @@
+import { motion } from "framer-motion";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
+  const footerVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <footer id="contact" className="bg-deep-royal-blue text-white py-12">
+    <motion.footer
+      id="contact"
+      className="bg-deep-royal-blue text-white py-12"
+      variants={footerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -67,7 +87,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

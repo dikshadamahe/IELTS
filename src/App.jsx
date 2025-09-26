@@ -4,19 +4,27 @@ import Features from "./components/Features";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 import ProgressBar from "./components/ProgressBar";
+import Courses from "./components/Courses";
+import Outcomes from "./components/Outcomes";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 function App() {
   return (
-    <div className="bg-cool-gray-light">
-      <ProgressBar />
-      <Navbar />
-      <main>
-        <Hero />
-        <Features />
-        <Testimonials />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <ParticlesBackground />
+      <div className="relative z-10">
+        <ProgressBar />
+        <Navbar />
+        <main>
+          <Hero />
+          <Courses />
+          <Features />
+          <Outcomes />
+          <Testimonials />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
 

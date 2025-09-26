@@ -1,0 +1,43 @@
+<svg width="520" height="420" viewBox="0 0 520 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="32" y="32" width="456" height="356" rx="40" fill="#0F172A" fill-opacity="0.45" />
+  <rect x="60" y="60" width="400" height="300" rx="36" fill="url(#paint0_linear_hero)" />
+  <circle cx="420" cy="120" r="28" fill="#FFB547" fill-opacity="0.35" />
+  <circle cx="120" cy="240" r="18" fill="#1DB954" fill-opacity="0.35" />
+  <path d="M140 180C140 155.699 159.699 136 184 136H296C320.301 136 340 155.699 340 180V284C340 308.301 320.301 328 296 328H184C159.699 328 140 308.301 140 284V180Z" fill="#0F172A" fill-opacity="0.65" />
+  <path d="M194 172C194 162.059 202.059 154 212 154H268C277.941 154 286 162.059 286 172V206C286 215.941 277.941 224 268 224H212C202.059 224 194 215.941 194 206V172Z" fill="#1DB954" />
+  <path d="M204 246C204 240.477 208.477 236 214 236H266C271.523 236 276 240.477 276 246V288H204V246Z" fill="#1A2B6D" />
+  <rect x="190" y="292" width="104" height="20" rx="10" fill="#FFB547" />
+  <g filter="url(#filter0_d_hero)">
+    <path d="M116 118C116 104.193 127.193 93 141 93H209C222.807 93 234 104.193 234 118C234 131.807 222.807 143 209 143H141C127.193 143 116 131.807 116 118Z" fill="#FFB547" />
+    <text x="130" y="126" fill="#101214" font-family="Poppins, sans-serif" font-size="18" font-weight="600">Band Score • 7.5</text>
+  </g>
+  <g filter="url(#filter1_d_hero)">
+    <rect x="308" y="206" width="88" height="120" rx="28" fill="#FFFFFF" fill-opacity="0.8" />
+    <path d="M340 254C340 244.611 347.611 237 357 237C366.389 237 374 244.611 374 254C374 263.389 366.389 271 357 271C347.611 271 340 263.389 340 254Z" fill="#1DB954" />
+    <path d="M326 308H388" stroke="#1A2B6D" stroke-width="6" stroke-linecap="round" />
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear_hero" x1="260" y1="60" x2="260" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A2B6D" />
+      <stop offset="1" stop-color="#101214" />
+    </linearGradient>
+    <filter id="filter0_d_hero" x="106" y="83" width="138" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
+      <feOffset dy="8" />
+      <feComposite in2="SourceAlpha" operator="out" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.98 0 0 0 0 0.71 0 0 0 0 0.28 0 0 0 0.35 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_hero" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_hero" result="shape" />
+    </filter>
+    <filter id="filter1_d_hero" x="298" y="196" width="108" height="140" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" />
+      <feOffset dy="10" />
+      <feComposite in2="SourceAlpha" operator="out" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.15 0 0 0 0 0.21 0 0 0 0 0.35 0 0 0 0.25 0" />
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_hero" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_hero" result="shape" />
+    </filter>
+  </defs>
+</svg>

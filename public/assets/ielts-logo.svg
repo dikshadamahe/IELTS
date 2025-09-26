@@ -1,0 +1,16 @@
+<svg width="160" height="48" viewBox="0 0 160 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="1.5" width="45" height="45" rx="12" fill="#1A2B6D" stroke="url(#paint0_linear_ielts)" stroke-width="3" />
+  <path d="M18.5 15.5H29C31.4853 15.5 33.5 17.5147 33.5 20V28C33.5 30.4853 31.4853 32.5 29 32.5H18.5V15.5Z" fill="#1DB954" />
+  <path d="M18.5 20.5H28.2C29.1941 20.5 30 21.3059 30 22.3V26.2C30 27.1941 29.1941 28 28.2 28H18.5V20.5Z" fill="#FFB547" />
+  <path d="M12.5 36L22.4 16.2" stroke="white" stroke-width="2.4" stroke-linecap="round" />
+  <path d="M37 34.5C40.3137 34.5 43 31.8137 43 28.5C43 25.1863 40.3137 22.5 37 22.5C33.6863 22.5 31 25.1863 31 28.5C31 31.8137 33.6863 34.5 37 34.5Z" stroke="white" stroke-width="2.4" />
+  <text x="56" y="18" fill="#F4F6F8" font-family="Poppins, sans-serif" font-weight="700" font-size="18">IELTS</text>
+  <text x="56" y="36" fill="#FFB547" font-family="Source Sans Pro, sans-serif" font-weight="500" font-size="16">Precision &amp; Progress</text>
+  <defs>
+    <linearGradient id="paint0_linear_ielts" x1="24" y1="0" x2="24" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB547"
+      />
+      <stop offset="1" stop-color="#1DB954" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+</svg>

@@ -102,11 +102,11 @@ const CallToAction = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-cool-gray-light">
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-cool-gray-dark">
               <div className="flex items-center space-x-2">
                 <div className="flex space-x-1">
                   {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-4 h-4 text-warm-golden-amber fill-current" />
+                    <Star key={star} className="w-4 h-4 text-golden-amber fill-current" />
                   ))}
                 </div>
                 <span className="text-sm">4.9/5 from 2,500+ students</span>

@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <motion.footer
       id="contact"
-      className="bg-deep-royal-blue/80 backdrop-blur-sm text-white py-12"
+      className="bg-footer-gradient text-white py-12"
       variants={footerVariants}
       initial="hidden"
       whileInView="visible"
@@ -27,7 +27,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold">IELTS Precision & Progress</h3>
-            <p className="mt-4 text-cool-gray-light">
+            <p className="mt-4 text-cool-gray-dark">
               Your journey to IELTS success starts here.
             </p>
           </div>
@@ -35,19 +35,19 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="mt-4 space-y-2">
               <li>
-                <a href="#home" className="hover:text-vibrant-emerald-green">
+                <a href="#home" className="hover:text-emerald-green transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#courses" className="hover:text-vibrant-emerald-green">
+                <a href="#courses" className="hover:text-emerald-green transition-colors">
                   Courses
                 </a>
               </li>
               <li>
                 <a
                   href="#testimonials"
-                  className="hover:text-vibrant-emerald-green"
+                  className="hover:text-emerald-green transition-colors"
                 >
                   Testimonials
                 </a>
@@ -56,31 +56,31 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="text-lg font-semibold">Contact Us</h4>
-            <p className="mt-4 text-cool-gray-light">
+            <p className="mt-4 text-cool-gray-dark">
               123 Main Street, Anytown, USA
             </p>
-            <p>Email: info@ieltsprecision.com</p>
-            <p>Phone: (123) 456-7890</p>
+            <p className="text-cool-gray-dark">Email: info@ieltsprecision.com</p>
+            <p className="text-cool-gray-dark">Phone: (123) 456-7890</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold">Follow Us</h4>
             <div className="mt-4 flex space-x-4">
-              <a href="#" className="hover:text-vibrant-emerald-green">
+              <a href="#" className="hover:text-emerald-green transition-colors">
                 <Facebook />
               </a>
-              <a href="#" className="hover:text-vibrant-emerald-green">
+              <a href="#" className="hover:text-emerald-green transition-colors">
                 <Twitter />
               </a>
-              <a href="#" className="hover:text-vibrant-emerald-green">
+              <a href="#" className="hover:text-emerald-green transition-colors">
                 <Instagram />
               </a>
-              <a href="#" className="hover:text-vibrant-emerald-green">
+              <a href="#" className="hover:text-emerald-green transition-colors">
                 <Linkedin />
               </a>
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-cool-gray-dark pt-8 text-center text-cool-gray-light">
+        <div className="mt-8 border-t border-cool-gray-dark/20 pt-8 text-center text-cool-gray-dark">
           <p>
             &copy; {new Date().getFullYear()} IELTS Precision & Progress. All
             rights reserved.

@@ -27,14 +27,14 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/20 backdrop-blur-md shadow-lg" : "bg-white/10 backdrop-blur-sm"
+        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-white/90 backdrop-blur-sm"
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <a href="#home" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-slate-800">
+              <span className="text-2xl font-bold text-charcoal-black">
                 IELTS Precision & Progress
               </span>
             </a>
@@ -45,7 +45,7 @@ const Navbar = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-slate-700 hover:bg-slate-200/50 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium transition-all"
+                  className="text-dark-gray hover:bg-emerald-green/10 hover:text-emerald-green px-3 py-2 rounded-md text-sm font-medium transition-all"
                 >
                   {link.label}
                 </a>
@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <Button 
-              variant="secondary" 
+              className="button-shimmer bg-emerald-green hover:bg-emerald-green/90 text-white border-none"
               onClick={() => setIsBookDemoOpen(true)}
             >
               Book Demo
@@ -63,7 +63,7 @@ const Navbar = () => {
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:text-slate-800 hover:bg-slate-200/50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500 transition-all"
+              className="inline-flex items-center justify-center p-2 rounded-md text-dark-gray hover:text-emerald-green hover:bg-emerald-green/10 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-green transition-all"
             >
               {isMenuOpen ? <X /> : <Menu />}
             </button>
@@ -71,23 +71,22 @@ const Navbar = () => {
         </div>
       </nav>
       {isMenuOpen && (
-        <div className="md:hidden bg-white/20 backdrop-blur-md">
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-border-light">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-slate-700 hover:bg-slate-200/50 hover:text-slate-900 block px-3 py-2 rounded-md text-base font-medium transition-all"
+                className="text-dark-gray hover:bg-emerald-green/10 hover:text-emerald-green block px-3 py-2 rounded-md text-base font-medium transition-all"
               >
                 {link.label}
               </a>
             ))}
           </div>
-          <div className="pt-4 pb-3 border-t border-slate-300/50">
+          <div className="pt-4 pb-3 border-t border-border-light">
             <div className="flex items-center px-5">
               <Button 
-                variant="secondary" 
-                className="w-full"
+                className="button-shimmer bg-emerald-green hover:bg-emerald-green/90 text-white border-none w-full"
                 onClick={() => setIsBookDemoOpen(true)}
               >
                 Book Demo

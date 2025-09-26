@@ -2,22 +2,24 @@ import React from 'react';
 
 const badges = [
   {
-    icon: '🏆',
-    title: 'Excellence',
-    score: 'Band 9.0',
-    description: 'Perfect proficiency across modules.',
+    icon: '✅',
+    title: 'Band 8+ Achievers',
+    description: '500+ students succeeded',
   },
   {
-    icon: '🥇',
-    title: 'Outstanding',
-    score: 'Band 8.5',
-    description: 'Commanding language mastery.',
+    icon: '📈',
+    title: 'Average Band Lift',
+    description: '+1.5 score improvement',
   },
   {
-    icon: '🎯',
-    title: 'Target Achieved',
-    score: 'Band 7.5',
-    description: 'Ready for global universities.',
+    icon: '�‍🏫',
+    title: 'Mentor Satisfaction',
+    description: '4.9/5 mentor rating',
+  },
+  {
+    icon: '⏱️',
+    title: 'Fast-Track Cohorts',
+    description: '6-week express results',
   },
 ];
 
@@ -26,30 +28,26 @@ const AchievementBadge: React.FC = () => {
     <section id="outcomes" className="bg-neutral-light py-section-gap">
       <div className="container max-w-content-bleed text-center">
         <h2 className="font-headings text-h2 text-primary">Celebrate Your IELTS Milestones</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-body text-slate/70">
-          Every milestone shines with its own amber glow. Hover to reveal the band score badges earned by our achievers.
+        <p className="mx-auto mt-4 max-w-2xl text-body text-charcoal/70">
+          Each badge represents the tangible progress our learners achieve through consistent guidance and precise feedback.
         </p>
-        <div className="mt-12 flex flex-wrap justify-center gap-10">
+        <div className="mt-12 flex flex-wrap justify-center gap-6">
           {badges.map((badge) => (
-            <button
+            <div
               key={badge.title}
-              type="button"
-              className="badge-card rounded-full border-0 bg-transparent p-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber/70"
-              aria-label={`${badge.title} – ${badge.score}`}
+              tabIndex={0}
+              className="group inline-flex items-center gap-4 rounded-full border border-amber/60 bg-white px-6 py-4 text-left shadow-[0_18px_36px_rgba(26,43,109,0.08)] transition-all duration-300 ease-brand hover:-translate-y-1 hover:shadow-[0_24px_42px_rgba(255,181,71,0.25)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber/70"
             >
-              <div className="badge-card-inner">
-                <div className="badge-card-face flex h-40 w-40 flex-col items-center justify-center rounded-full bg-amber text-4xl text-neutral-dark shadow-glow">
-                  <span>{badge.icon}</span>
-                  <span className="mt-3 text-small font-semibold uppercase tracking-[0.15em]">
-                    {badge.title}
-                  </span>
-                </div>
-                <div className="badge-card-face badge-card-back flex h-40 w-40 flex-col items-center justify-center rounded-full bg-primary text-white shadow-glow">
-                  <span className="text-lg font-semibold">{badge.score}</span>
-                  <p className="mt-2 px-6 text-xs text-white/80">{badge.description}</p>
-                </div>
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-amber/15 text-xl text-amber">
+                {badge.icon}
+              </span>
+              <div>
+                <p className="font-headings text-small font-semibold uppercase tracking-[0.14em] text-primary">
+                  {badge.title}
+                </p>
+                <p className="text-xs text-charcoal/70">{badge.description}</p>
               </div>
-            </button>
+            </div>
           ))}
         </div>
       </div>

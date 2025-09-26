@@ -36,7 +36,7 @@ const ProgressBar: React.FC = () => {
   }, []);
 
   return (
-    <div className="sticky top-16 z-40 bg-white/70 backdrop-blur">
+    <div className="sticky top-[72px] z-40 bg-white/85 backdrop-blur">
       <div className="mx-auto w-full max-w-content-bleed px-4 py-4">
         <div className="mb-3 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-primary/70">
           <span>Progress Tracker</span>

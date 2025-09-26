@@ -1,18 +1,43 @@
-# React + Vite
+# IELTS Precision & Progress
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fictional IELTS institute homepage crafted with React and Tailwind CSS. The experience embodies the **Precision & Progress** design system—balancing confident brand identity with data-driven storytelling for ambitious learners.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```powershell
+git clone <repo-link>
+cd <repo-folder>
+npm install
+npm run dev
+```
 
-## React Compiler
+Use `npm run build` for production bundles and `npm run preview` to inspect the compiled output locally.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Stack
 
-Note: This will impact Vite dev & build performances.
+- **React + Vite** for fast iterations and modern build tooling.
+- **Tailwind CSS** with custom tokens for the IELTS Precision & Progress design system.
+- **Type-safe design tokens** surfaced via `design-tokens.json` and mirrored in CSS variables.
 
-## Expanding the ESLint configuration
+## Design Choices
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Palette centres on Deep Royal Blue (trust), Emerald Green (growth), and Golden Amber (achievement), anchored by neutral grays for structure.
+- Typographic pairing of Poppins for headings, Source Sans Pro for body text, and Merriweather italics for testimonials adds academic confidence.
+- Interactive patterns—underline grows, button lift, sticky progress bar—reinforce the feeling of forward movement without playful distractions.
+- Responsive 12-column grid with a 64px section rhythm ensures clarity from mobile to desktop.
+
+## Key Sections
+
+- **Navbar:** 72px sticky header with scroll-aware styling and CTA glow.
+- **Hero:** Split layout with bold headline, supporting stats, and dual call-to-action.
+- **Features:** Grid of animated cards highlighting core program strengths.
+- **Testimonials:** Merriweather quotes paired with amber score badges for social proof.
+- **Progress Bar:** Sticky emerald tracker that visualises scrolled progress.
+- **Achievement Badges:** Amber-bordered pills celebrating community milestones.
+- **Footer:** Deep Royal Blue closing section with resources, newsletter, and social links.
+
+## Notes
+
+- Fully responsive, mobile-first layout tested against Tailwind’s breakpoints.
+- Animations respect `prefers-reduced-motion` and provide accessible focus outlines.
+- Static front-end demo; hook into CMS or backend of your choice for production use.

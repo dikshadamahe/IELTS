@@ -74,7 +74,7 @@ function App() {
               <h2 className="font-headings text-h2 text-primary">
                 Why Learners Choose Precision &amp; Progress
               </h2>
-              <p className="mt-4 text-body text-slate/70">
+              <p className="mt-4 text-body text-charcoal/70">
                 A proven framework that balances expert-led lessons with intelligent analytics to keep you focused on consistent band uplift.
               </p>
             </div>
@@ -90,7 +90,7 @@ function App() {
           <div className="container max-w-content-bleed">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="font-headings text-h2 text-primary">Success Stories</h2>
-              <p className="mt-4 text-body text-slate/70">
+              <p className="mt-4 text-body text-charcoal/70">
                 Real learners, real progress. Hear from graduates who now study and work in their dream destinations.
               </p>
             </div>
@@ -113,7 +113,7 @@ function App() {
               <h2 className="mt-6 font-headings text-h2 text-primary">
                 Study Pods tailored for every IELTS module
               </h2>
-              <p className="mt-4 text-body text-slate/70">
+              <p className="mt-4 text-body text-charcoal/70">
                 Access curated reading lists, vocabulary drills, speaking labs, and writing evaluations that mirror the actual exam conditions. Every resource comes with mentor notes and sample answers.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">

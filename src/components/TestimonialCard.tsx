@@ -34,8 +34,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   role = "Graduate, Band 8"
 }) => {
   return (
-    <figure className="relative rounded-3xl border border-neutral-medium/20 bg-white p-8 shadow-card transition-transform duration-300 ease-brand hover:-translate-y-2">
-      <div className="absolute right-8 top-8 rounded-full bg-amber px-4 py-1 text-small font-semibold text-neutral-dark shadow-glow">
+    <figure className="group relative overflow-hidden rounded-3xl border border-neutral-medium/30 bg-white p-8 shadow-[0_18px_36px_rgba(26,43,109,0.08)] transition-all duration-300 ease-brand hover:-translate-y-2 hover:border-emerald/50 hover:shadow-[0_26px_48px_rgba(26,43,109,0.14)]">
+      <span className="pointer-events-none absolute -left-1 top-6 text-7xl font-serif text-emerald/10">“</span>
+      <div className="absolute right-6 top-6 rounded-full bg-amber px-4 py-1 text-small font-semibold text-neutral-dark shadow-glow">
         Band {score}
       </div>
       <div className="flex items-center gap-4">
@@ -47,8 +48,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           <p className="text-small uppercase tracking-[0.12em] text-slate/70">{role}</p>
         </figcaption>
       </div>
-      <blockquote className="mt-6 border-l-4 border-amber/50 pl-6 text-quote text-slate/90">
-        “{quote}”
+      <blockquote className="mt-6 border-l-4 border-emerald/40 pl-6 text-quote text-charcoal/80">
+        &ldquo;{quote}&rdquo;
       </blockquote>
     </figure>
   );

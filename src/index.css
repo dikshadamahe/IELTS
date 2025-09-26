@@ -108,31 +108,3 @@ input:focus {
   box-shadow: 0 0 25px rgba(255, 181, 71, 0.35);
 }
 
-.badge-card {
-  perspective: 1200px;
-}
-
-.badge-card-inner {
-  position: relative;
-  width: 160px;
-  height: 160px;
-  transition: transform var(--transition-duration-medium) var(--transition-brand);
-  transform-style: preserve-3d;
-}
-
-.badge-card:hover .badge-card-inner,
-.badge-card:focus-within .badge-card-inner {
-  transform: rotateY(180deg);
-}
-
-.badge-card-face {
-  position: absolute;
-  inset: 0;
-  border-radius: 999px;
-  backface-visibility: hidden;
-}
-
-.badge-card-back {
-  transform: rotateY(180deg);
-}
-

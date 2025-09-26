@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="relative bg-deep-royal-blue text-white py-20 sm:py-28 lg:py-32"
+      className="relative bg-white/10 backdrop-blur-sm text-white py-20 sm:py-28 lg:py-32"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -75,28 +75,28 @@ const Hero = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <motion.div
-              className="p-4 rounded-lg bg-white/10"
+              className="p-4 rounded-lg bg-white/20 backdrop-blur-sm border border-white/10"
               variants={itemVariants}
             >
               <h3 className="text-3xl font-bold text-warm-golden-amber">12k+</h3>
               <p className="mt-2 text-cool-gray-light">Learners Coached</p>
             </motion.div>
             <motion.div
-              className="p-4 rounded-lg bg-white/10"
+              className="p-4 rounded-lg bg-white/20 backdrop-blur-sm border border-white/10"
               variants={itemVariants}
             >
               <h3 className="text-3xl font-bold text-warm-golden-amber">96%</h3>
               <p className="mt-2 text-cool-gray-light">Band 7+ Success</p>
             </motion.div>
             <motion.div
-              className="p-4 rounded-lg bg-white/10"
+              className="p-4 rounded-lg bg-white/20 backdrop-blur-sm border border-white/10"
               variants={itemVariants}
             >
               <h3 className="text-3xl font-bold text-warm-golden-amber">4.8/5</h3>
               <p className="mt-2 text-cool-gray-light">Learner Rating</p>
             </motion.div>
             <motion.div
-              className="p-4 rounded-lg bg-white/10"
+              className="p-4 rounded-lg bg-white/20 backdrop-blur-sm border border-white/10"
               variants={itemVariants}
             >
               <h3 className="text-3xl font-bold text-warm-golden-amber">24/7</h3>

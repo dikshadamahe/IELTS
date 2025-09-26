@@ -39,7 +39,7 @@ const Testimonials = () => {
   return (
     <motion.section
       id="testimonials"
-      className="py-20 sm:py-28 lg:py-32 bg-white"
+      className="py-20 sm:py-28 lg:py-32 bg-white/30 backdrop-blur-sm"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"

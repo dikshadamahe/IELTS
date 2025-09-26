@@ -27,7 +27,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 }) => {
   return (
     <motion.div
-      className="bg-gray-50 p-8 rounded-xl shadow-md flex flex-col items-center text-center"
+      className="bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-md flex flex-col items-center text-center"
       variants={itemVariants}
     >
       <img

@@ -53,7 +53,7 @@ const Outcomes = () => {
   return (
     <motion.section
       id="outcomes"
-      className="py-20 sm:py-28 lg:py-32 bg-gray-50"
+      className="py-20 sm:py-28 lg:py-32 bg-white/25 backdrop-blur-sm"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -73,7 +73,7 @@ const Outcomes = () => {
           {outcomes.map((outcome) => (
             <motion.div
               key={outcome.label}
-              className="bg-white p-8 rounded-xl shadow-lg"
+              className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"
               variants={itemVariants}
             >
               <div className="flex justify-center items-center">{outcome.icon}</div>

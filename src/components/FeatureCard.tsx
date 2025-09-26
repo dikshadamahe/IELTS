@@ -25,7 +25,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 }) => {
   return (
     <motion.div
-      className="bg-white p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300"
+      className="bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300"
       variants={itemVariants}
       whileHover={{
         scale: 1.05,

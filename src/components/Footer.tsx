@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <motion.footer
       id="contact"
-      className="bg-deep-royal-blue text-white py-12"
+      className="bg-deep-royal-blue/80 backdrop-blur-sm text-white py-12"
       variants={footerVariants}
       initial="hidden"
       whileInView="visible"

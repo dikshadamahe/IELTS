@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Mic, Edit, Laptop } from "lucide-react";
 import { Button } from "./ui/Button";
+import BookDemoModal from "./BookDemoModal";
 
 const courses = [
   {
@@ -47,6 +49,7 @@ const itemVariants = {
 };
 
 const Courses = () => {
+  const [isBookDemoOpen, setIsBookDemoOpen] = useState(false);
   return (
     <motion.section
       id="courses"
@@ -80,11 +83,23 @@ const Courses = () => {
               <p className="mt-2 text-cool-gray-light flex-grow">
                 {course.description}
               </p>
-              <Button variant="secondary" className="mt-6">Learn More</Button>
+              <Button 
+                variant="secondary" 
+                className="mt-6"
+                onClick={() => setIsBookDemoOpen(true)}
+              >
+                Book Demo
+              </Button>
             </motion.div>
           ))}
         </div>
       </div>
+      
+      {/* Book Demo Modal */}
+      <BookDemoModal 
+        isOpen={isBookDemoOpen} 
+        onClose={() => setIsBookDemoOpen(false)} 
+      />
     </motion.section>
   );
 };

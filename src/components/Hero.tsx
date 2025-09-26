@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/Button";
+import BookDemoModal from "./BookDemoModal";
 
 const Hero = () => {
+  const [isBookDemoOpen, setIsBookDemoOpen] = useState(false);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -54,7 +57,11 @@ const Hero = () => {
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
             variants={itemVariants}
           >
-            <Button size="lg" variant="secondary">
+            <Button 
+              size="lg" 
+              variant="secondary"
+              onClick={() => setIsBookDemoOpen(true)}
+            >
               Book a Free Demo
             </Button>
             <Button size="lg" variant="outline">
@@ -98,6 +105,12 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
+      
+      {/* Book Demo Modal */}
+      <BookDemoModal 
+        isOpen={isBookDemoOpen} 
+        onClose={() => setIsBookDemoOpen(false)} 
+      />
     </motion.section>
   );
 };

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/Button";
 import { Menu, X } from "lucide-react";
+import BookDemoModal from "./BookDemoModal";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -13,6 +14,7 @@ const links = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBookDemoOpen, setIsBookDemoOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +53,12 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <Button variant="secondary">Book Demo</Button>
+            <Button 
+              variant="secondary" 
+              onClick={() => setIsBookDemoOpen(true)}
+            >
+              Book Demo
+            </Button>
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
@@ -78,13 +85,23 @@ const Navbar = () => {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-700">
             <div className="flex items-center px-5">
-              <Button variant="secondary" className="w-full">
+              <Button 
+                variant="secondary" 
+                className="w-full"
+                onClick={() => setIsBookDemoOpen(true)}
+              >
                 Book Demo
               </Button>
             </div>
           </div>
         </div>
       )}
+      
+      {/* Book Demo Modal */}
+      <BookDemoModal 
+        isOpen={isBookDemoOpen} 
+        onClose={() => setIsBookDemoOpen(false)} 
+      />
     </header>
   );
 };

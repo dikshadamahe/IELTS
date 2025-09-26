@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import ProgressBar from "./components/ProgressBar";
 import Courses from "./components/Courses";
 import Outcomes from "./components/Outcomes";
+import CallToAction from "./components/CallToAction";
 import ParticlesBackground from "./components/ParticlesBackground";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Features />
           <Outcomes />
           <Testimonials />
+          <CallToAction />
         </main>
         <Footer />
       </div>

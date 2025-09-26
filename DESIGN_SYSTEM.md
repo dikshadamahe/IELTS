@@ -1,200 +1,153 @@
-# 🎓 IELTS Precision & Progress – Design System Documentation
+# 📘 IELTS Precision & Progress — Design System
 
-**Version:** 1.0  
-**Purpose:** Provide a modern, aspirational design system for the fictional IELTS Institute so product teams (human or AI) can deliver consistent, accessible experiences across web and native surfaces.
-
----
-
-## 1. 🎯 Brand Principles
-
-| Principle  | Translation in UI                                                                 |
-| ---------- | ---------------------------------------------------------------------------------- |
-| Confidence | Commanding royal blue surfaces, bold typographic hierarchy, decisive CTAs          |
-| Clarity    | Spacious layouts, restrained colour usage, intuitive navigation and messaging      |
-| Progress   | Motion reinforces forward momentum (progress trackers, hover lifts, badge flips)   |
-
-**Target audience:** Ambitious students & early-career professionals aged 18–35.
+Version 2.0 · Updated September 27, 2025  
+Purpose: Align every touchpoint of the IELTS Precision & Progress experience with a confident, academic, modern brand that inspires measurable improvement.
 
 ---
 
-## 2. 🎨 Colour System
+## 1. Brand Identity
 
-### Core Palette
+**Tone of voice** — Confident, academic, modern, professional. Messaging should feel like guidance from a trusted mentor who has seen hundreds of successful IELTS journeys.
 
-| Token              | Hex      | RGB          | Usage                                             |
-| ------------------ | -------- | ------------ | ------------------------------------------------- |
-| `primary`          | `#1A2B6D`| 26, 43, 109  | Hero shells, headings, nav states, form rails     |
-| `secondary` (CTA)  | `#1DB954`| 29, 185, 84  | Primary buttons, highlights, active indicators    |
-| `accent` (Success) | `#FFB547`| 255, 181, 71 | Achievement badges, stat highlights, score chips  |
-| `neutral-light`    | `#F4F6F8`| 244, 246, 248| Page backgrounds, cards, dashboard shells         |
-| `neutral-medium`   | `#D9DEE2`| 217, 222, 226| Dividers, inactive steps, card borders            |
-| `neutral-dark`     | `#101214`| 16, 18, 20   | Body copy on light, footer backgrounds            |
-| `slate`            | `#273043`| 39, 48, 67   | Secondary text, icons, muted labels               |
+**Target audience** — Students and young professionals (18–35) preparing for IELTS Academic or General Training while balancing study, work, and relocation goals.
 
-#### ✅ Do’s
-- Use Royal Blue (`primary`) as the anchor colour for hero areas and typography.
-- Reserve Emerald (`secondary`) for CTAs, key indicators, and selection states.
-- Deploy Amber (`accent`) sparingly to signify achievement, progress, and success metrics.
-- Balance layouts with neutrals to maintain legibility and harmony.
+**Core concept** — *Precision + Progress*. Interfaces must communicate structure, clarity, and ambition. Every touchpoint should reassure learners that their preparation is data-driven and momentum-building.
 
-#### ❌ Don’ts
-- Avoid amber text on light backgrounds below 16px (contrast breach).
-- Never flood large surfaces with Emerald; keep it for moments of action.
-- Do not mix more than one highlight colour within a single component.
+Key translation in UI:
 
-All tokens are exposed as CSS variables in `src/index.css` and surfaced in Tailwind under `theme.extend.colors`. A machine-readable snapshot lives in `src/assets/design-tokens.json`.
+- Precision → clean layouts, tight typographic hierarchy, crystal-clear navigation.
+- Progress → motion and metrics that show forward movement (progress bars, glowing badges, demonstrable stats).
+- Confidence → bold blue headings, decisive CTAs, crisp interactions with no playful wobble.
 
 ---
 
-## 3. ✍️ Typography
+## 2. Color System
 
-### Font Families
+### Primary palette
 
-| Role         | Family options (preferred → fallback)              |
-| ------------ | -------------------------------------------------- |
-| Headings     | Poppins → Montserrat → system sans                 |
-| Body         | Source Sans Pro → Inter → system sans              |
-| Quotes/Accent| Merriweather (italic) → Georgia → serif            |
+| Token | Name | HEX | RGB | Meaning | Primary usage |
+| --- | --- | --- | --- | --- | --- |
+| `color-primary` | Deep Royal Blue | `#1A2B6D` | 26, 43, 109 | Trust & authority | Headings, hero backgrounds, nav states |
+| `color-emerald` | Vibrant Emerald Green | `#1DB954` | 29, 185, 84 | Growth & action | Links, CTAs, progress indicators |
+| `color-amber` | Warm Golden Amber | `#FFB547` | 255, 181, 71 | Achievement & premium | Achievement badges, highlights |
 
-Fonts are loaded from Google Fonts via `index.html` and wired into Tailwind (`fontFamily.headings/body/accent`).
+### Neutral palette
 
-### Type Scale (base 16px)
+| Token | Name | HEX | RGB | Usage |
+| --- | --- | --- | --- | --- |
+| `color-gray-light` | Cool Gray Light | `#F4F6F8` | 244, 246, 248 | Background surfaces, section fill |
+| `color-gray-medium` | Cool Gray Medium | `#D9DEE2` | 217, 222, 226 | Borders, dividers, subtle outlines |
+| `color-charcoal` | Charcoal Black | `#101214` | 16, 18, 20 | Body copy, iconography, max contrast |
 
-| Style       | Token     | Weight | Size | Line-height | Usage                       |
-| ----------- | --------- | ------ | ---- | ----------- | --------------------------- |
-| H1          | `text-h1` | 700    | 48px | 1.2         | Hero headlines              |
-| H2          | `text-h2` | 600    | 36px | 1.3         | Section titles              |
-| H3          | `text-h3` | 600    | 28px | 1.3         | Card titles                 |
-| H4          | `text-h4` | 500    | 22px | 1.4         | Subheads, footer headings   |
-| Body        | `text-body`| 400   | 16px | 1.6         | Paragraph copy              |
-| Small       | `text-small`| 500  | 14px | 1.5         | Nav links, labels           |
-| Quotes      | `text-quote`| 400i | 18px | 1.6         | Testimonials, pull quotes   |
+> **Usage rules**  
+> - Backgrounds default to white or `color-gray-light`.  
+> - Body text must use `color-charcoal`. H1–H3 can use `color-primary`; interactive links and CTAs use `color-emerald`.  
+> - Use `color-amber` sparingly for badges or key highlights; never cover large surfaces with it.  
+> - Avoid combining more than two brand colors in the same region; lean on neutrals for balance.  
+> - Ensure contrast ratios stay AA compliant (emerald text must be ≥16px on light backgrounds).
 
-**Usage rules**
-- H1/H2 always in Poppins bold; H3/H4 may fall back to Montserrat for contrast.
-- Maintain generous line height (≥1.4) in body text for readability.
-- Merriweather italic strictly for testimonials and inspirational quotes.
+Tokens are available as CSS variables (`--color-*`) in `src/index.css`, mirrored in Tailwind via `tailwind.config.js`, and exported as JSON in `src/assets/design-tokens.json`.
 
 ---
 
-## 4. 📐 Layout & Spacing
+## 3. Typography
 
-### Grid
-- Container max-width: **1200px** (`max-w-content-bleed`).
-- Responsive grid: 12 columns with a 24px gutter. Tailwind `container` is centred with `padding: 1rem`.
+### Font stack
 
-### Spacing scale (4px base)
+- **Headings:** Poppins (preferred) → Montserrat → system sans. Bold, geometric, confident.
+- **Body copy:** Source Sans Pro → Inter → system sans. Optimised for clarity and long-form reading.
+- **Accents & quotes:** Merriweather italic → Georgia → serif. Used only for testimonials, quotes, highlighted statements.
 
-| Token | Value | Usage examples                |
-| ----- | ----- | ----------------------------- |
-| `xs`  | 4px   | Icon padding, fine separators |
-| `s`   | 8px   | Chips, tight vertical rhythm  |
-| `m`   | 16px  | Card padding, text blocks     |
-| `l`   | 24px  | Component spacing             |
-| `xl`  | 32px  | Section breathing             |
-| `xxl` | 48px  | Hero secondary spacing        |
-| `section-gap` | 64px | Section vertical rhythm |
+Fonts are streamed from Google Fonts in `index.html` and mapped in Tailwind under `fontFamily.headings`, `fontFamily.body`, and `fontFamily.accent`.
 
-### Breakpoints
-- **Mobile:** 0–639px – stacked columns, full-width CTAs.
-- **Tablet:** 640–1023px – 2-column grids, sticky progress sections remain full width.
-- **Desktop:** 1024–1439px – 3 to 4-column compositions, hero split view.
-- **Wide:** 1440px+ – Additional whitespace, hero illustration scaling.
+### Type scale (desktop → mobile)
 
-Custom names (`tablet`, `desktop`, `wide`) are available alongside Tailwind defaults for semantic breakpoints.
+| Style | Weight | Desktop size | Mobile size | Color guidance | Usage |
+| --- | --- | --- | --- | --- | --- |
+| H1 | 700 | 48px | 32px | `color-primary` | Hero headlines |
+| H2 | 600 | 36px | 28px | `color-primary` | Section headings |
+| H3 | 500 | 28px | 22px | `color-primary` | Card titles, sub-sections |
+| Body Large | 400 | 18px | 16px | `color-charcoal` | Lead paragraphs |
+| Body Small | 400 | 14px | 12px | `color-charcoal` or `color-gray-medium` | Nav links, metadata |
+| Quotes (accent) | 400 italic | 18px | 16px | `color-charcoal` or `color-emerald` accent | Testimonials |
 
----
+Usage rules:
 
-## 5. 🧩 Components
-
-### 5.1 Navbar
-- **Structure:** Logo left, navigation centre, CTA cluster right.
-- **Behaviour:** Transparent at top; morphs to solid `primary` with blur + shadow after 32px scroll.
-- **Interactions:** Nav links use `group-hover` underline that animates outwards; CTA buttons animate with scale and colour darkening.
-- **Height:** 64px desktop / 56px mobile (`h-16` with `py-4` wrapper). Sticky header is implemented in `components/Navbar.tsx`.
-
-### 5.2 Hero section
-- Split layout: copy (left) + animated illustration (right).
-- Background blends `bg-hero-gradient` with subtle radial highlights (`bg-hero-pattern`).
-- Primary CTA (`secondary` button) and secondary outline CTA align horizontally on tablet+.
-- Stats grid gives social proof; hero illustration floats using `animate-float` keyframe.
-
-### 5.3 Feature cards
-- Content order: Icon → Title → Copy → Link CTA.
-- Styles: Rounded 24–32px corners, light border, `shadow-card` + `hover:shadow-glow`.
-- Hover effect: Lift (`translate-y`) + amber gradient accent.
-
-### 5.4 Testimonials
-- Layout: Responsive grid (1 → 3 columns). Each card features circular avatar, amber score chip, Merriweather blockquote.
-- Supports emoji or SVG avatar sources.
-- Accessible semantics via `<figure>`/`<figcaption>`.
-
-### 5.5 Sticky progress bar
-- Lives beneath the navbar and remains `sticky` at `top-16`.
-- Scroll-driven width update via `scroll` listener in `ProgressBar.tsx`.
-- Segments (Study → Practice → Test → Success) highlight with emerald fill when target threshold reached.
-
-### 5.6 Achievement badges
-- Circular badge flips on hover/focus using custom 3D CSS helpers (`.badge-card*`).
-- Front face shows icon + title; back face reveals band score with amber glow.
-
-### 5.7 Footer
-- Charcoal background with four-column grid: About, Courses, Resources, Newsletter.
-- Newsletter CTA uses pill form + emerald submit button.
-- Social icons minimal, shift to emerald on hover.
-
-Component source lives under `src/components/` and matches the Tailwind contracts described above.
+- Headings must always use the Poppins stack; never render Merriweather in a heading level.  
+- Line-height across body copy: 1.4–1.6 for readability.  
+- Reserve bold for headings and key emphasis; avoid all-caps body paragraphs.  
+- Quote blocks use Merriweather italic with generous padding and accent color.
 
 ---
 
-## 6. ✨ Interaction Patterns
+## 4. Layout & Grid
 
-| Pattern           | Implementation                                                                 |
-| ----------------- | ------------------------------------------------------------------------------ |
-| Hover animations  | Buttons scale to 1.05 & darken (`transition ease-brand 200–300ms`). Cards lift with glow. |
-| Nav underline     | `::after` style executed via Tailwind `group-hover` to grow from centre.        |
-| Sticky progress   | `sticky` container tracks scroll progress and updates gradient fill width.     |
-| Badge flip        | `.badge-card-inner` rotates 180° on hover/focus, revealing score.              |
-| Focus treatment   | High contrast outlines using emerald for keyboard accessibility.               |
-
----
-
-## 7. 🎬 Motion & Animation
-
-- **Timing function:** `cubic-bezier(0.4, 0, 0.2, 1)` (exposed as `ease-brand`).
-- **Durations:** 200–300 ms for hover/press states; 600–800 ms for scroll or hero pattern shifts.
-- **Use cases:**
-	- Smooth navbar transition & shadow on scroll.
-	- Hero illustration floating loop (6 s).
-	- Progress bar fill animation tied to scroll.
-	- Achievement badge flip (500 ms) on hover/focus.
+- **Grid system:** 12-column responsive grid capped at 1200 px, centred via Tailwind `container`.  
+- **Gutters:** Minimum 24 px between columns on desktop; stack to full-width on mobile.  
+- **Section padding:** 64 px top/bottom on desktop (`py-section-gap`), 32 px on mobile.  
+- **Card padding:** 24 px internal padding, radius 16 px or greater.  
+- **Spacing scale (px):** 4, 8, 16, 24, 32, 48, 64. Utilities exposed as Tailwind spacing tokens (`space-4`, `space-6`, etc.).  
+- **Container behaviour:** Always centre align key sections, leaving ample whitespace to reinforce clarity.
 
 ---
 
-## 8. 🛠 Implementation Notes
+## 5. Components
 
-- **Tokens:** CSS variables declared in `src/index.css`; mirrored in Tailwind config and `design-tokens.json`.
-- **Tailwind setup:** Custom colours (`primary`, `emerald`, `amber`, `charcoal`), fonts, spacing, shadows, keyframes, and gradients added under `theme.extend` in `tailwind.config.js`.
-- **Responsive behaviour:** Mobile-first stacking with `grid`/`flex` breakpoints at `tablet` and `desktop`.
-- **Accessibility:**
-	- Colour contrast meets WCAG AA (emerald on charcoal limited to icons/CTA text ≥14px).
-	- Visible focus outlines for interactive elements.
-	- Semantic HTML elements for testimonials (`figure`), navigation (`nav`), and progress semantics.
-- **Assets:** All SVG artwork resides in `public/assets/` (logo, hero illustration, resource diagrams, profile placeholders).
-- **Fonts:** `Poppins`, `Montserrat`, `Source Sans Pro`, `Inter`, `Merriweather ital` loaded via Google Fonts with weights 400–700.
+### Navbar
+
+- Height 72 px. Logo left, nav links right (max five).  
+- Transparent at page top; on scroll, shift to solid Deep Royal Blue with subtle blur and shadow.  
+- Links use Body Small typography, uppercase tracking, and emerald underline that expands from centre in 0.2 s.  
+- CTA: pill-shaped, emerald background, white text, amber glow on hover.
+
+### Hero section
+
+- Split layout: text left, illustration/right asset. White or subtle blue→gray gradient background.  
+- H1 uses Poppins Bold Deep Royal Blue; supporting copy in Body Large.  
+- Primary CTA button: solid emerald. Secondary CTA: outline blue.  
+- Include social proof stats wherever possible.
+
+### Feature cards
+
+- Display three or four cards in a responsive grid.  
+- White background, 16 px radius, `shadow-sm` default.  
+- Icons in emerald circle with amber accent, positioned above heading.  
+- Hover: translateY(-4px), `shadow-lg`, emerald border glow.
+
+### Testimonials
+
+- Carousel or grid of two-to-three cards.  
+- Section background uses Cool Gray Light.  
+- Quote copy uses Merriweather italic; name/title in Poppins small caps.  
+- Include oversized, semi-transparent emerald quote mark for accent.  
+- Score badge leverages amber chip treatment.
+
+### Footer
+
+- Background Deep Royal Blue.  
+- Text white, Body Small scale.  
+- Links adopt emerald underline grow on hover.  
+- Include contact info, quick links, and achievement badges (e.g., “500+ Students Succeeded”) when space permits.
 
 ---
 
-## 9. 📦 Deliverables Checklist
+## 6. Interaction Patterns
 
-- [x] **Fonts** – Poppins, Inter, Merriweather, Montserrat, Source Sans Pro.
-- [x] **Tokens** – Colours, typography, spacing in CSS variables + JSON (`src/assets/design-tokens.json`).
-- [x] **Components** – Navbar, Hero, Feature Cards, Testimonials, Sticky Progress Bar, Achievement Badges, Footer.
-- [x] **Assets** – SVG logo, hero illustration, resource diagram, student avatars (see `public/assets`).
-- [x] **Motion** – Keyframes (`float`, `shimmer`, `flip`) defined in Tailwind for reuse.
+- **Hover animations** — Links: underline grows from centre. Buttons: subtle scale (1.03) and shadow pop. Cards: lift + emerald/amber glow.  
+- **Sticky progress bar** — Slim emerald bar sits directly beneath the navbar, tracking scroll progress across sections; width updates smoothly on scroll.  
+- **Achievement badges** — Pill/circular badges with amber border. On hover/focus, show subtle glow; never use playful bounce.  
+- **Motion principles** — Keep timing 200 ms ease-out for hover states, 400 ms+ for scroll-based transitions. Effects should feel refined, not gamified.  
+- **Accessibility** — Ensure focus states are visible (emerald outline). Animations must respect reduced-motion preferences.
 
 ---
 
-For implementation details, review the referenced files in `src/components/` and consult Tailwind utility contracts in `tailwind.config.js`.
+## Implementation quick links
+
+- Tokens & utilities in `src/index.css`, `tailwind.config.js`, `src/assets/design-tokens.json`.  
+- Core components inside `src/components/`.  
+- Motion helpers (`ease-brand`, `animate-float`, badge flip) defined in Tailwind config.  
+- Refer to `README.md` for setup instructions and quick start.
+
+This document should guide designers, engineers, and content strategists to build cohesive experiences that feel structured, aspirational, and unmistakably IELTS Precision & Progress.
 
 

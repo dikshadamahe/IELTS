@@ -145,7 +145,7 @@ Usage rules:
 
 - Tokens & utilities in `src/index.css`, `tailwind.config.js`, `src/assets/design-tokens.json`.  
 - Core components inside `src/components/`.  
-- Motion helpers (`ease-brand`, `animate-float`, badge flip) defined in Tailwind config.  
+- Motion helpers (`ease-brand`, `animate-float`) defined in Tailwind config.  
 - Refer to `README.md` for setup instructions and quick start.
 
 This document should guide designers, engineers, and content strategists to build cohesive experiences that feel structured, aspirational, and unmistakably IELTS Precision & Progress.

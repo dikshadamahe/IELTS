@@ -24,6 +24,12 @@ const socials = [
   { label: 'Instagram', icon: 'ig', href: 'https://instagram.com' },
 ];
 
+const achievements = [
+  '500+ Band 8+ Achievers',
+  'Top 1% Mentor Ratings',
+  'Global Cohorts in 12 Countries',
+];
+
 const Footer: React.FC = () => {
   return (
     <footer id="contact" className="mt-section-gap bg-primary text-white">
@@ -91,6 +97,16 @@ const Footer: React.FC = () => {
                 >
                   <span className="text-sm uppercase tracking-[0.18em]">{social.icon}</span>
                 </a>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
+              {achievements.map((item) => (
+                <span
+                  key={item}
+                  className="inline-flex items-center rounded-full border border-amber/80 bg-white/5 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-white/80 shadow-[0_10px_24px_rgba(255,181,71,0.25)]"
+                >
+                  {item}
+                </span>
               ))}
             </div>
           </div>

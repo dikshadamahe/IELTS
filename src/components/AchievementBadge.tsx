@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 
 const badges = [
   {
@@ -24,6 +25,9 @@ const badges = [
 ];
 
 const AchievementBadge: React.FC = () => {
+  const reduceMotion = useReducedMotion();
+  const easing = [0.22, 1, 0.36, 1] as const;
+
   return (
     <section id="outcomes" className="bg-neutral-light py-section-gap">
       <div className="container max-w-content-bleed text-center">
@@ -33,10 +37,15 @@ const AchievementBadge: React.FC = () => {
         </p>
         <div className="mt-12 flex flex-wrap justify-center gap-6">
           {badges.map((badge) => (
-            <div
+            <motion.div
               key={badge.title}
               tabIndex={0}
-              className="group inline-flex items-center gap-4 rounded-full border border-amber/60 bg-white px-6 py-4 text-left shadow-[0_18px_36px_rgba(26,43,109,0.08)] transition-all duration-300 ease-brand hover:-translate-y-1 hover:shadow-[0_24px_42px_rgba(255,181,71,0.25)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber/70"
+              initial={{ opacity: 0, y: reduceMotion ? 0 : 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.7, ease: easing }}
+              whileHover={{ y: reduceMotion ? 0 : -8, boxShadow: reduceMotion ? undefined : '0 26px 48px rgba(255,181,71,0.35)' }}
+              className="group inline-flex items-center gap-4 rounded-full border border-amber/70 bg-white px-6 py-4 text-left shadow-[0_18px_36px_rgba(26,43,109,0.1)] transition-all duration-400 ease-brand focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber/70"
             >
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-amber/15 text-xl text-amber">
                 {badge.icon}
@@ -47,7 +56,7 @@ const AchievementBadge: React.FC = () => {
                 </p>
                 <p className="text-xs text-charcoal/70">{badge.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -7,12 +7,27 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Primary Brand Colors
+        'royal-blue': '#1A2B6D',
+        'charcoal-black': '#101214',
+        'emerald-green': '#1DB954',
+        'golden-amber': '#FFB547',
+        
+        // Background Colors
+        'cool-gray-light': '#F4F6F8',
+        'white': '#FFFFFF',
+        
+        // Text Colors
+        'dark-gray': '#333333',
+        'cool-gray-dark': '#D9DEE2',
+        
+        // Legacy support (keeping old names)
         'deep-royal-blue': '#1A2B6D',
         'vibrant-emerald-green': '#1DB954',
         'warm-golden-amber': '#FFB547',
-        'cool-gray-light': '#F4F6F8',
-        'cool-gray-dark': '#D9DEE2',
-        'charcoal-black': '#101214',
+        
+        // Border & UI
+        'border-light': '#E5E7EB',
       },
       fontFamily: {
         heading: ['Poppins', 'Montserrat', 'sans-serif'],
@@ -66,15 +81,27 @@ export default {
           '0%': { transform: 'rotateY(0deg)' },
           '100%': { transform: 'rotateY(180deg)' },
         },
+        'gradient-flow': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
       },
       animation: {
         float: 'float 6s ease-in-out infinite',
         shimmer: 'shimmer 10s linear infinite',
         flip: 'flip 500ms ease-in-out',
+        'gradient-shimmer': 'shimmer 2s linear infinite',
+        'gradient-text': 'gradient-flow 3s ease-in-out infinite',
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, rgba(26,43,109,1) 0%, rgba(16,18,20,0.85) 100%)',
-        'hero-pattern': 'radial-gradient(circle at 20% 20%, rgba(255, 181, 71, 0.25) 0%, rgba(26, 43, 109, 0) 45%), radial-gradient(circle at 80% 0%, rgba(29, 185, 84, 0.2) 0%, rgba(16, 18, 20, 0) 35%)',
+        'hero-gradient': 'linear-gradient(135deg, #1A2B6D 0%, #101214 100%)',
+        'text-gradient': 'linear-gradient(135deg, #1A2B6D 0%, #1DB954 50%, #FFB547 100%)',
+        'progress-gradient': 'linear-gradient(90deg, #1DB954 0%, #FFB547 100%)',
+        'footer-gradient': 'linear-gradient(135deg, #1A2B6D 0%, #101214 100%)',
+        'button-gradient': 'linear-gradient(135deg, #1DB954 0%, #16A34A 100%)',
+        'button-shimmer': 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+        'legacy-hero-gradient': 'linear-gradient(135deg, rgba(26,43,109,1) 0%, rgba(16,18,20,0.85) 100%)',
+        'legacy-hero-pattern': 'radial-gradient(circle at 20% 20%, rgba(255, 181, 71, 0.25) 0%, rgba(26, 43, 109, 0) 45%), radial-gradient(circle at 80% 0%, rgba(29, 185, 84, 0.2) 0%, rgba(16, 18, 20, 0) 35%)',
       },
     },
     container: {

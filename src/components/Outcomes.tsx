@@ -53,7 +53,7 @@ const Outcomes = () => {
   return (
     <motion.section
       id="outcomes"
-      className="py-20 sm:py-28 lg:py-32 bg-white/25 backdrop-blur-sm"
+      className="py-20 sm:py-28 lg:py-32 bg-cool-gray-light"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -61,10 +61,10 @@ const Outcomes = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-800">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-black">
             Measurable Outcomes, Real Results
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-slate-700">
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-dark-gray">
             Our data-driven approach ensures that every student makes
             significant and quantifiable progress.
           </p>
@@ -73,17 +73,18 @@ const Outcomes = () => {
           {outcomes.map((outcome) => (
             <motion.div
               key={outcome.label}
-              className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"
+              className="bg-white p-8 rounded-xl shadow-lg border border-border-light hover:shadow-xl hover:shadow-emerald-green/10 transition-all duration-300 text-center"
               variants={itemVariants}
+              whileHover={{ scale: 1.05, y: -8 }}
             >
-              <div className="flex justify-center items-center">{outcome.icon}</div>
-              <p className="mt-4 text-4xl lg:text-5xl font-extrabold text-slate-800">
+              <div className="flex justify-center items-center mb-4">{outcome.icon}</div>
+              <p className="text-4xl lg:text-5xl font-extrabold text-emerald-green mb-2">
                 {outcome.value}
               </p>
-              <h3 className="mt-2 text-xl font-bold text-slate-800">
+              <h3 className="text-xl font-bold text-charcoal-black mb-2">
                 {outcome.label}
               </h3>
-              <p className="mt-1 text-base text-slate-600">
+              <p className="text-base text-dark-gray">
                 {outcome.description}
               </p>
             </motion.div>

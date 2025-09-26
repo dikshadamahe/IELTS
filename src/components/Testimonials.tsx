@@ -39,7 +39,7 @@ const Testimonials = () => {
   return (
     <motion.section
       id="testimonials"
-      className="py-20 sm:py-28 lg:py-32 bg-white/30 backdrop-blur-sm"
+      className="py-20 sm:py-28 lg:py-32 bg-white"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -47,10 +47,10 @@ const Testimonials = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-800">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-black">
             Success Stories from Our Students
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-slate-700">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-dark-gray">
             Hear what our students have to say about their experience with
             IELTS Precision & Progress.
           </p>

@@ -29,25 +29,28 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="relative bg-white/10 backdrop-blur-sm text-white py-20 sm:py-28 lg:py-32"
+      className="relative bg-hero-gradient text-white py-20 sm:py-28 lg:py-32 overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-royal-blue/10 via-transparent to-emerald-green/10"></div>
+      <div className="absolute top-20 right-10 w-64 h-64 bg-emerald-green/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-golden-amber/5 rounded-full blur-3xl"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div className="text-center" variants={containerVariants}>
           <motion.h1
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight"
             variants={itemVariants}
           >
-            <span className="block">Master the IELTS Exam with</span>
-            <span className="block gradient-text">
+            <span className="block text-white">Master the IELTS Exam with</span>
+            <span className="block gradient-text font-black">
               Precision & Progress
             </span>
           </motion.h1>
           <motion.p
-            className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-cool-gray-light"
+            className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-cool-gray-dark"
             variants={itemVariants}
           >
             Achieve your desired band score with our expert-led courses,
@@ -59,12 +62,16 @@ const Hero = () => {
           >
             <Button 
               size="lg" 
-              variant="secondary"
+              className="button-shimmer bg-emerald-green hover:bg-emerald-green/90 text-white border-none px-8 py-4 text-lg font-semibold"
               onClick={() => setIsBookDemoOpen(true)}
             >
               Book a Free Demo
             </Button>
-            <Button size="lg" variant="outline">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-4 text-lg font-semibold"
+            >
               Download Brochure
             </Button>
           </motion.div>
@@ -75,32 +82,36 @@ const Hero = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <motion.div
-              className="p-4 rounded-lg bg-white/20 backdrop-blur-sm border border-white/10"
+              className="p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
               variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
             >
-              <h3 className="text-3xl font-bold text-warm-golden-amber">12k+</h3>
-              <p className="mt-2 text-cool-gray-light">Learners Coached</p>
+              <h3 className="text-3xl font-bold text-golden-amber mb-2">12k+</h3>
+              <p className="text-cool-gray-dark font-medium">Learners Coached</p>
             </motion.div>
             <motion.div
-              className="p-4 rounded-lg bg-white/20 backdrop-blur-sm border border-white/10"
+              className="p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
               variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
             >
-              <h3 className="text-3xl font-bold text-warm-golden-amber">96%</h3>
-              <p className="mt-2 text-cool-gray-light">Band 7+ Success</p>
+              <h3 className="text-3xl font-bold text-golden-amber mb-2">96%</h3>
+              <p className="text-cool-gray-dark font-medium">Band 7+ Success</p>
             </motion.div>
             <motion.div
-              className="p-4 rounded-lg bg-white/20 backdrop-blur-sm border border-white/10"
+              className="p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
               variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
             >
-              <h3 className="text-3xl font-bold text-warm-golden-amber">4.8/5</h3>
-              <p className="mt-2 text-cool-gray-light">Learner Rating</p>
+              <h3 className="text-3xl font-bold text-golden-amber mb-2">4.8/5</h3>
+              <p className="text-cool-gray-dark font-medium">Learner Rating</p>
             </motion.div>
             <motion.div
-              className="p-4 rounded-lg bg-white/20 backdrop-blur-sm border border-white/10"
+              className="p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
               variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
             >
-              <h3 className="text-3xl font-bold text-warm-golden-amber">24/7</h3>
-              <p className="mt-2 text-cool-gray-light">Mentor Support</p>
+              <h3 className="text-3xl font-bold text-golden-amber mb-2">24/7</h3>
+              <p className="text-cool-gray-dark font-medium">Mentor Support</p>
             </motion.div>
           </div>
         </motion.div>

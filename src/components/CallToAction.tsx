@@ -24,16 +24,16 @@ const CallToAction = () => {
 
   return (
     <motion.section
-      className="py-20 sm:py-28 lg:py-32 bg-gradient-to-br from-deep-royal-blue to-deep-royal-blue/80 text-white relative overflow-hidden"
+      className="py-20 sm:py-28 lg:py-32 bg-hero-gradient text-white relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="absolute top-0 right-0 w-64 h-64 bg-vibrant-emerald-green/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-warm-golden-amber/10 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-royal-blue/20 via-transparent to-emerald-green/20"></div>
+      <div className="absolute top-20 right-10 w-64 h-64 bg-emerald-green/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 bg-golden-amber/10 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
@@ -61,11 +61,11 @@ const CallToAction = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center justify-center md:justify-start space-x-3 text-cool-gray-light">
-                <div className="flex-shrink-0 w-10 h-10 bg-vibrant-emerald-green/20 rounded-full flex items-center justify-center text-vibrant-emerald-green">
+              <div className="flex items-center space-x-2">
+                <div className="flex-shrink-0 w-10 h-10 bg-emerald-green/20 rounded-full flex items-center justify-center text-emerald-green">
                   {benefit.icon}
                 </div>
-                <span className="text-left">{benefit.text}</span>
+                <span className="text-left text-cool-gray-dark">{benefit.text}</span>
               </div>
             ))}
           </motion.div>
@@ -80,9 +80,8 @@ const CallToAction = () => {
           >
             <Button
               size="lg"
-              variant="secondary"
+              className="button-shimmer bg-emerald-green hover:bg-emerald-green/90 text-white border-none px-8 py-4 text-lg font-semibold"
               onClick={() => setIsBookDemoOpen(true)}
-              className="bg-vibrant-emerald-green hover:bg-vibrant-emerald-green/90 text-white border-none px-8 py-4"
             >
               <span className="flex items-center">
                 Book Your Free Demo Today
@@ -90,7 +89,7 @@ const CallToAction = () => {
               </span>
             </Button>
             
-            <div className="text-sm text-cool-gray-light">
+            <div className="text-sm text-cool-gray-dark">
               <strong className="text-white">100% Free</strong> • No Credit Card Required • 30-Minute Session
             </div>
           </motion.div>

@@ -25,18 +25,19 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 }) => {
   return (
     <motion.div
-      className="bg-white/60 backdrop-blur-sm p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300"
+      className="bg-white p-6 rounded-xl shadow-lg border border-border-light hover:shadow-xl hover:shadow-emerald-green/10 transition-all duration-300"
       variants={itemVariants}
       whileHover={{
         scale: 1.05,
-        boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",
+        y: -8,
+        boxShadow: "0px 20px 40px rgba(29, 185, 84, 0.15)",
       }}
     >
-      <div className="flex items-center justify-center h-12 w-12 rounded-full bg-vibrant-emerald-green text-white">
+      <div className="flex items-center justify-center h-14 w-14 rounded-full bg-emerald-green text-white mb-4">
         {icon}
       </div>
-      <h3 className="mt-6 text-xl font-bold text-slate-800">{title}</h3>
-      <p className="mt-2 text-slate-700">{description}</p>
+      <h3 className="text-xl font-bold text-charcoal-black mb-3">{title}</h3>
+      <p className="text-dark-gray leading-relaxed">{description}</p>
     </motion.div>
   );
 };

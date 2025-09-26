@@ -53,7 +53,7 @@ const Courses = () => {
   return (
     <motion.section
       id="courses"
-      className="py-20 sm:py-28 lg:py-32 bg-white/20 backdrop-blur-sm"
+      className="py-20 sm:py-28 lg:py-32 bg-cool-gray-light"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -61,10 +61,10 @@ const Courses = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-800">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal-black">
             Our Courses
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-slate-700">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-dark-gray">
             Tailored programs designed to help you achieve your best score.
           </p>
         </div>
@@ -72,20 +72,21 @@ const Courses = () => {
           {courses.map((course) => (
             <motion.div
               key={course.title}
-              className="bg-deep-royal-blue p-8 rounded-xl shadow-lg text-white flex flex-col"
+              className="bg-white p-8 rounded-xl shadow-lg border border-border-light hover:shadow-xl hover:shadow-emerald-green/10 transition-all duration-300 flex flex-col"
               variants={itemVariants}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -8, scale: 1.02 }}
             >
-              <div className="bg-vibrant-emerald-green/20 w-16 h-16 rounded-full flex items-center justify-center">
-                {course.icon}
+              <div className="bg-emerald-green/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="text-emerald-green">
+                  {course.icon}
+                </div>
               </div>
-              <h3 className="mt-6 text-xl font-bold">{course.title}</h3>
-              <p className="mt-2 text-cool-gray-light flex-grow">
+              <h3 className="text-xl font-bold text-charcoal-black mb-3">{course.title}</h3>
+              <p className="text-dark-gray flex-grow leading-relaxed">
                 {course.description}
               </p>
               <Button 
-                variant="secondary" 
-                className="mt-6"
+                className="mt-6 button-shimmer bg-emerald-green hover:bg-emerald-green/90 text-white border-none w-full"
                 onClick={() => setIsBookDemoOpen(true)}
               >
                 Book Demo

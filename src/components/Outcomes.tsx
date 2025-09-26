@@ -61,10 +61,10 @@ const Outcomes = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-deep-royal-blue">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-800">
             Measurable Outcomes, Real Results
           </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-lg text-charcoal-black">
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-slate-700">
             Our data-driven approach ensures that every student makes
             significant and quantifiable progress.
           </p>
@@ -77,13 +77,13 @@ const Outcomes = () => {
               variants={itemVariants}
             >
               <div className="flex justify-center items-center">{outcome.icon}</div>
-              <p className="mt-4 text-4xl lg:text-5xl font-extrabold text-deep-royal-blue">
+              <p className="mt-4 text-4xl lg:text-5xl font-extrabold text-slate-800">
                 {outcome.value}
               </p>
-              <h3 className="mt-2 text-xl font-bold text-charcoal-black">
+              <h3 className="mt-2 text-xl font-bold text-slate-800">
                 {outcome.label}
               </h3>
-              <p className="mt-1 text-base text-cool-gray">
+              <p className="mt-1 text-base text-slate-600">
                 {outcome.description}
               </p>
             </motion.div>

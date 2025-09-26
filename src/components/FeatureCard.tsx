@@ -35,8 +35,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       <div className="flex items-center justify-center h-12 w-12 rounded-full bg-vibrant-emerald-green text-white">
         {icon}
       </div>
-      <h3 className="mt-6 text-xl font-bold text-deep-royal-blue">{title}</h3>
-      <p className="mt-2 text-charcoal-black">{description}</p>
+      <h3 className="mt-6 text-xl font-bold text-slate-800">{title}</h3>
+      <p className="mt-2 text-slate-700">{description}</p>
     </motion.div>
   );
 };

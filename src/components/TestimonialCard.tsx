@@ -36,16 +36,16 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         alt={`${name}'s avatar`}
       />
       <div className="mt-4">
-        <h4 className="text-lg font-bold text-deep-royal-blue">{name}</h4>
+        <h4 className="text-lg font-bold text-slate-800">{name}</h4>
         <div className="mt-2">
-          <p className="ml-2 text-lg font-semibold text-charcoal-black">
+          <p className="ml-2 text-lg font-semibold text-slate-700">
             Band Score: {bandScore}
           </p>
         </div>
       </div>
-      <p className="mt-6 text-lg text-charcoal-black">"{review}"</p>
+      <p className="mt-6 text-lg text-slate-700 font-medium">"{review}"</p>
       <div className="mt-6">
-        <button className="text-sm font-medium text-deep-royal-blue">
+        <button className="text-sm font-medium text-slate-600 hover:text-slate-800">
           Read more
         </button>
       </div>

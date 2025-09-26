@@ -1,96 +1,90 @@
-import React, { useEffect, useState } from 'react';
+import { useState, useEffect } from "react";
+import { Button } from "./ui/Button";
+import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: 'Home', href: '#home' },
-  { label: 'Courses', href: '#courses' },
-  { label: 'Outcomes', href: '#outcomes' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
+  { label: "Home", href: "#home" },
+  { label: "Courses", href: "#courses" },
+  { label: "Outcomes", href: "#outcomes" },
+  { label: "Testimonials", href: "#testimonials" },
+  { label: "Contact", href: "#contact" },
 ];
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 32);
+      setIsScrolled(window.scrollY > 10);
     };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-brand ${
-        isScrolled
-          ? 'bg-primary/95 backdrop-blur-lg py-2 shadow-card'
-          : 'bg-transparent py-3'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-deep-royal-blue/95 shadow-lg backdrop-blur-sm" : ""
       }`}
     >
-      <nav className="container flex h-[72px] max-w-content-bleed items-center justify-between">
-        <a
-          href="#home"
-          className={`flex items-center gap-3 font-headings text-xl transition-colors duration-200 ease-brand ${
-            isScrolled ? 'text-white' : 'text-primary'
-          }`}
-        >
-          <img
-            src="/assets/ielts-logo.svg"
-            alt="IELTS Precision & Progress"
-            className="h-10 w-auto drop-shadow-lg"
-          />
-          <span
-            className={`hidden sm:inline ${
-              isScrolled ? 'text-white/90' : 'text-primary/80'
-            }`}
-          >
-            Precision &amp; Progress
-          </span>
-        </a>
-
-        <div className="hidden items-center gap-8 lg:flex">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`group relative text-small uppercase tracking-[0.08em] transition-all duration-200 ease-brand ${
-                isScrolled
-                  ? 'text-white/80 hover:text-white focus-visible:text-white'
-                  : 'text-primary/80 hover:text-primary focus-visible:text-primary'
-              }`}
-            >
-              <span>{link.label}</span>
-              <span
-                className={`absolute inset-x-0 -bottom-1 mx-auto block h-0.5 w-0 origin-center transition-all duration-300 ease-brand group-hover:w-full group-focus-visible:w-full ${
-                  isScrolled ? 'bg-secondary' : 'bg-emerald'
-                }`}
-              />
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex-shrink-0">
+            <a href="#home" className="flex items-center space-x-2">
+              <span className="text-2xl font-bold text-white">
+                IELTS Precision & Progress
+              </span>
             </a>
-          ))}
-        </div>
-
-        <div className="flex items-center gap-4">
-          <a
-            href="#resources"
-            className={`hidden rounded-full px-5 py-2 text-small font-semibold transition-all duration-200 ease-brand md:inline-flex ${
-              isScrolled
-                ? 'border border-white/30 text-white/80 hover:border-white hover:text-white focus-visible:border-white focus-visible:text-white'
-                : 'border border-primary/30 text-primary hover:border-primary hover:text-primary focus-visible:border-primary focus-visible:text-primary'
-            }`}
-          >
-            Download Brochure
-          </a>
-          <a
-            href="#contact"
-            className="rounded-full bg-secondary px-6 py-2 text-small font-semibold uppercase tracking-[0.08em] text-white shadow-card transition-all duration-200 ease-brand hover:-translate-y-0.5 hover:bg-emerald/90 hover:shadow-[0_0_18px_rgba(255,181,71,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber"
-          >
-            Book a Demo
-          </a>
+          </div>
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {links.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div className="hidden md:block">
+            <Button variant="secondary">Book Demo</Button>
+          </div>
+          <div className="-mr-2 flex md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+            >
+              {isMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
       </nav>
+      {isMenuOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          <div className="pt-4 pb-3 border-t border-gray-700">
+            <div className="flex items-center px-5">
+              <Button variant="secondary" className="w-full">
+                Book Demo
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

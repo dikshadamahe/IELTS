@@ -1,21 +1,19 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Testimonials from './components/Testimonials';
-import Footer from './components/Footer';
-import ProgressBar from './components/ProgressBar';
-import Resources from './components/Resources';
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
+import ProgressBar from "./components/ProgressBar";
 
 function App() {
   return (
-    <div className="min-h-screen bg-neutral-light">
-      <Navbar />
+    <div className="bg-cool-gray-light">
       <ProgressBar />
-      <main className="pt-24">
+      <Navbar />
+      <main>
         <Hero />
         <Features />
         <Testimonials />
-        <Resources />
       </main>
       <Footer />
     </div>

@@ -1,124 +1,70 @@
-import React from 'react';
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
-const FOOTER_LINKS = {
-  About: [
-    { label: 'Our Story', href: '#about' },
-    { label: 'Instructors', href: '#team' },
-    { label: 'Success Stories', href: '#testimonials' },
-  ],
-  Courses: [
-    { label: 'IELTS Academic', href: '#courses' },
-    { label: 'IELTS General', href: '#courses' },
-    { label: 'Speaking Mastery', href: '#courses' },
-  ],
-  Resources: [
-    { label: 'Practice Tests', href: '#resources' },
-    { label: 'Study Materials', href: '#resources' },
-    { label: 'IELTS Blog', href: '#resources' },
-  ],
-};
-
-const socials = [
-  { label: 'LinkedIn', icon: 'in', href: 'https://linkedin.com' },
-  { label: 'YouTube', icon: 'yt', href: 'https://youtube.com' },
-  { label: 'Instagram', icon: 'ig', href: 'https://instagram.com' },
-];
-
-const achievements = [
-  '500+ Band 8+ Achievers',
-  'Top 1% Mentor Ratings',
-  'Global Cohorts in 12 Countries',
-];
-
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer id="contact" className="mt-section-gap bg-primary text-white">
-      <div className="container max-w-content-bleed px-4 py-section-gap">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
+    <footer id="contact" className="bg-deep-royal-blue text-white py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center gap-3">
-              <img src="/assets/ielts-logo.svg" alt="IELTS Precision & Progress" className="h-12" />
-              <span className="font-headings text-lg text-white/80">Precision &amp; Progress</span>
-            </div>
-            <p className="mt-6 max-w-sm text-body text-white/70">
-              Empowering ambitious learners to reach their dream IELTS band through mentorship, immersive practice, and progress tracking that celebrates every milestone.
+            <h3 className="text-xl font-bold">IELTS Precision & Progress</h3>
+            <p className="mt-4 text-cool-gray-light">
+              Your journey to IELTS success starts here.
             </p>
           </div>
-
-          {Object.entries(FOOTER_LINKS).map(([section, links]) => (
-            <div key={section}>
-              <h3 className="font-headings text-h4 text-white">{section}</h3>
-              <ul className="mt-4 space-y-3 text-small text-white/60">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="group relative inline-flex items-center transition-colors duration-200 ease-brand hover:text-emerald focus-visible:text-emerald"
-                    >
-                      <span>{link.label}</span>
-                      <span className="absolute inset-x-0 -bottom-1 mx-auto block h-0.5 w-0 origin-center bg-emerald transition-all duration-300 ease-brand group-hover:w-full group-focus-visible:w-full" />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-
           <div>
-            <h3 className="font-headings text-h4 text-white">Stay in the loop</h3>
-            <p className="mt-4 text-small text-white/60">
-              Receive weekly IELTS tips, practice resources, and invite-only masterclasses.
-            </p>
-            <form className="mt-6 flex overflow-hidden rounded-full border border-white/15 bg-white/5 backdrop-blur">
-              <label htmlFor="newsletter" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="newsletter"
-                type="email"
-                required
-                placeholder="name@email.com"
-                className="flex-1 bg-transparent px-5 py-3 text-small text-white placeholder:text-white/50 focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="bg-secondary px-5 text-small font-semibold uppercase tracking-[0.12em] text-white transition-all duration-200 ease-brand hover:bg-emerald/90 hover:shadow-[0_0_18px_rgba(255,181,71,0.45)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber"
-              >
-                Join
-              </button>
-            </form>
-            <div className="mt-6 flex items-center gap-4">
-              {socials.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/70 transition-all duration-200 ease-brand hover:border-emerald hover:text-emerald focus-visible:border-emerald focus-visible:text-emerald"
-                >
-                  <span className="text-sm uppercase tracking-[0.18em]">{social.icon}</span>
+            <h4 className="text-lg font-semibold">Quick Links</h4>
+            <ul className="mt-4 space-y-2">
+              <li>
+                <a href="#home" className="hover:text-vibrant-emerald-green">
+                  Home
                 </a>
-              ))}
-            </div>
-            <div className="mt-6 flex flex-wrap gap-3">
-              {achievements.map((item) => (
-                <span
-                  key={item}
-                  className="inline-flex items-center rounded-full border border-amber/80 bg-white/5 px-4 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-white/80 shadow-[0_10px_24px_rgba(255,181,71,0.25)]"
+              </li>
+              <li>
+                <a href="#courses" className="hover:text-vibrant-emerald-green">
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  className="hover:text-vibrant-emerald-green"
                 >
-                  {item}
-                </span>
-              ))}
+                  Testimonials
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold">Contact Us</h4>
+            <p className="mt-4 text-cool-gray-light">
+              123 Main Street, Anytown, USA
+            </p>
+            <p>Email: info@ieltsprecision.com</p>
+            <p>Phone: (123) 456-7890</p>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold">Follow Us</h4>
+            <div className="mt-4 flex space-x-4">
+              <a href="#" className="hover:text-vibrant-emerald-green">
+                <Facebook />
+              </a>
+              <a href="#" className="hover:text-vibrant-emerald-green">
+                <Twitter />
+              </a>
+              <a href="#" className="hover:text-vibrant-emerald-green">
+                <Instagram />
+              </a>
+              <a href="#" className="hover:text-vibrant-emerald-green">
+                <Linkedin />
+              </a>
             </div>
           </div>
         </div>
-
-        <div className="mt-12 flex flex-col items-center justify-between border-t border-white/15 pt-6 text-center text-small text-white/60 sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} IELTS Precision &amp; Progress. All rights reserved.</p>
-          <div className="mt-3 flex gap-6 sm:mt-0">
-            <a href="#privacy" className="hover:text-emerald focus-visible:text-emerald">Privacy</a>
-            <a href="#terms" className="hover:text-emerald focus-visible:text-emerald">Terms</a>
-            <a href="#accessibility" className="hover:text-emerald focus-visible:text-emerald">Accessibility</a>
-          </div>
+        <div className="mt-8 border-t border-cool-gray-dark pt-8 text-center text-cool-gray-light">
+          <p>
+            &copy; {new Date().getFullYear()} IELTS Precision & Progress. All
+            rights reserved.
+          </p>
         </div>
       </div>
     </footer>

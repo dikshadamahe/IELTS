@@ -7,22 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1A2B6D',
-        secondary: '#1DB954',
-        accent: '#FFB547',
-        'neutral-light': '#F4F6F8',
-        'neutral-medium': '#D9DEE2',
-        'neutral-dark': '#101214',
-        'royal-blue': '#1A2B6D',
-        emerald: '#1DB954',
-        amber: '#FFB547',
-        charcoal: '#101214',
-        slate: '#273043',
-        "white-soft": '#FFFFFFE6',
+        'deep-royal-blue': '#1A2B6D',
+        'vibrant-emerald-green': '#1DB954',
+        'warm-golden-amber': '#FFB547',
+        'cool-gray-light': '#F4F6F8',
+        'cool-gray-dark': '#D9DEE2',
+        'charcoal-black': '#101214',
       },
       fontFamily: {
-        headings: ['Poppins', 'Montserrat', 'sans-serif'],
-        body: ['"Source Sans Pro"', 'Inter', 'sans-serif'],
+        heading: ['Poppins', 'Montserrat', 'sans-serif'],
+        body: ['Inter', 'Source Sans Pro', 'sans-serif'],
         accent: ['Merriweather', 'serif'],
       },
       fontSize: {

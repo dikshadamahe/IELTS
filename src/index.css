@@ -38,8 +38,7 @@
   a:focus,
   button:focus,
   input:focus {
-    outline: 2px solid theme('colors.secondary');
-    outline-offset: 2px;
+    @apply outline-2 outline-offset-2 outline-secondary;
   }
 }
 

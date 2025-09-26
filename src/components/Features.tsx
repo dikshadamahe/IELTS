@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, Easing } from 'framer-motion';
 import FeatureCard from './FeatureCard';
 
 const features = [

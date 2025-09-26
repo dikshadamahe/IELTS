@@ -8,28 +8,28 @@ import AchievementBadge from './components/AchievementBadge';
 
 const features = [
   {
-    icon: '🎯',
-    title: 'Targeted Practice',
+    icon: '🗣️',
+    title: 'Speaking Practice',
     description:
-      'Adaptive drills zero in on your weakest IELTS components with instant mentor feedback.',
+      'Live mentor-led labs simulate IELTS speaking rooms with targeted drills and instant scoring tips.',
   },
   {
-    icon: '👩‍🏫',
-    title: 'Mentor Guidance',
+    icon: '�',
+    title: 'Mock Tests',
     description:
-      'Certified IELTS trainers coach you through weekly live sessions and speaking labs.',
+      'Weekly full-length assessments with proctoring analytics so you refine pacing, accuracy, and stamina.',
   },
   {
-    icon: '📊',
-    title: 'Smart Analytics',
+    icon: '🤖',
+    title: 'AI Band Score',
     description:
-      'Personal dashboards track your band progression and readiness across listening, reading, writing & speaking.',
+      'Smart insights break down each module, flagging grammar, fluency, and coherence gaps to close fast.',
   },
   {
-    icon: '🕒',
-    title: 'Flexible Schedules',
+    icon: '🤝',
+    title: 'Mentor Support',
     description:
-      'Micro-learning playlists and weekend bootcamps fit seamlessly into busy professional lives.',
+      'Dedicated IELTS strategists track your study plan, answer doubts 24/7, and celebrate every milestone.',
   },
 ];
 

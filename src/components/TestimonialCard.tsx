@@ -48,7 +48,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           <p className="text-small uppercase tracking-[0.12em] text-slate/70">{role}</p>
         </figcaption>
       </div>
-      <blockquote className="mt-6 border-l-4 border-emerald/40 pl-6 text-quote text-charcoal/80">
+      <blockquote className="mt-6 border-l-4 border-emerald/40 pl-6 text-quote font-accent italic text-charcoal/80">
         &ldquo;{quote}&rdquo;
       </blockquote>
     </figure>

@@ -7,9 +7,9 @@ interface FeatureCardProps {
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ 
-  icon = "📚", 
-  title = "Expert Training", 
-  description = "Learn from certified IELTS instructors with proven track records of student success." 
+  icon = "�️", 
+  title = "Speaking Practice Labs", 
+  description = "Role-play real IELTS speaking scenarios with mentors who grade each response in real time." 
 }) => {
   return (
     <article className="group relative rounded-3xl border border-neutral-medium/30 bg-white p-8 shadow-[0_20px_38px_rgba(26,43,109,0.08)] transition-all duration-300 ease-brand hover:-translate-y-2 hover:border-emerald/50 hover:shadow-[0_28px_48px_rgba(26,43,109,0.12)]">

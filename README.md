@@ -58,6 +58,7 @@ This application serves as a complete digital solution for IELTS institutes, pro
    # or
    yarn dev
    ```
+   The application will be available at `http://localhost:5173`
 
 4. **Build for production**
    ```bash
@@ -65,6 +66,7 @@ This application serves as a complete digital solution for IELTS institutes, pro
    # or
    yarn build
    ```
+   Production files will be generated in the `dist/` directory
 
 5. **Preview production build**
    ```bash
@@ -72,6 +74,29 @@ This application serves as a complete digital solution for IELTS institutes, pro
    # or
    yarn preview
    ```
+   Preview the production build at `http://localhost:4173`
+
+### Additional Setup Commands
+
+```bash
+# Run linting
+npm run lint
+
+# Type checking (if TypeScript)
+npm run type-check
+
+# Clean build artifacts
+rm -rf dist node_modules/.vite
+
+# Reinstall dependencies (if needed)
+npm ci
+```
+
+### Development Tips
+- **Hot Module Replacement (HMR)**: Changes are reflected instantly during development
+- **Environment Variables**: Create `.env.local` for local environment variables
+- **IDE Setup**: VS Code with Vite, Tailwind CSS, and ESLint extensions recommended
+- **Browser DevTools**: React Developer Tools and Vite DevTools for debugging
 
 ## Design System Specifications
 
@@ -99,6 +124,75 @@ A three-tier font system ensures optimal readability and visual hierarchy:
 - **Interactive Elements**: Hover states with 200ms cubic-bezier transitions
 - **Animation System**: 60fps performance with reduced-motion preference support
 - **Gradient Applications**: Multi-stop gradients for text and background elements
+
+## Design Philosophy & Choices
+
+### Core Design Principles
+
+This application was architected around the **"Precision & Progress"** philosophy, which influences every design decision:
+
+#### 1. **Academic Professionalism**
+- **Typography**: Poppins for headings conveys confidence and geometric precision, while Inter ensures optimal readability for educational content
+- **Color Psychology**: Royal Blue (#1A2B6D) establishes trust and academic authority, essential for educational services
+- **Layout**: Clean, structured grid system with generous whitespace promotes focus and reduces cognitive load
+
+#### 2. **Progress Visualization**
+- **Dynamic Elements**: Animated progress bars and scroll indicators provide constant feedback on user journey
+- **Interactive Particles**: 100 connected particles create a sense of interconnected learning and growth
+- **Micro-interactions**: Subtle hover effects and transitions reinforce the feeling of forward movement
+
+#### 3. **Accessibility-First Approach**
+- **Motion Sensitivity**: All animations respect `prefers-reduced-motion` settings for users with vestibular disorders
+- **Color Contrast**: Minimum 4.5:1 ratio maintained throughout, exceeding WCAG AA standards
+- **Keyboard Navigation**: Full keyboard accessibility for all interactive elements
+- **Screen Readers**: Comprehensive ARIA labels and semantic HTML structure
+
+#### 4. **Conversion Optimization**
+- **Visual Hierarchy**: Strategic use of Brand Green (#28a745) for primary actions guides user attention
+- **Social Proof**: Testimonials with authentic student photos and band scores build credibility
+- **Form Design**: Multi-step modal with progress indication reduces abandonment rates
+- **Trust Signals**: Professional imagery and statistical achievements prominently displayed
+
+### Technical Architecture Decisions
+
+#### **React + TypeScript**
+- **Component Modularity**: Each section is a self-contained, reusable component
+- **Type Safety**: TypeScript prevents runtime errors and improves developer experience
+- **Performance**: React 18's concurrent features enable smooth animations without blocking UI
+
+#### **Tailwind CSS**
+- **Utility-First**: Rapid development with consistent design tokens
+- **Responsive Design**: Mobile-first approach with breakpoint-specific utilities
+- **Customization**: Extended configuration for brand colors and custom animations
+
+#### **Framer Motion**
+- **Declarative Animations**: Easy-to-maintain animation code with variants system
+- **Performance**: Hardware-accelerated animations for smooth 60fps experience
+- **Accessibility**: Built-in reduced-motion support and animation orchestration
+
+#### **Particle System**
+- **Engagement**: Interactive background creates memorable visual experience
+- **Performance**: Optimized rendering with canvas-based particles (tsparticles)
+- **Responsiveness**: Particle density adapts to screen size for optimal performance
+
+### User Experience Considerations
+
+#### **Loading & Performance**
+- **Code Splitting**: Lazy loading of components reduces initial bundle size
+- **Image Optimization**: Proper sizing and format selection for web delivery
+- **Critical Path**: Above-the-fold content loads first for perceived performance
+
+#### **Mobile Experience**
+- **Touch Targets**: Minimum 44px touch targets following Apple and Google guidelines
+- **Viewport**: Responsive design ensures usability across all device sizes
+- **Performance**: Optimized animations and reduced particle count on mobile devices
+
+#### **Brand Consistency**
+- **Design Tokens**: Centralized color and spacing system ensures visual consistency
+- **Component Library**: Reusable Button component with consistent styling variants
+- **Icon System**: Lucide React icons provide cohesive visual language throughout
+
+These design choices collectively create an educational platform that feels both professional and approachable, encouraging prospective students to engage while building trust in the IELTS preparation services.
 
 ## Project Structure
 

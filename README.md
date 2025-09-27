@@ -100,7 +100,7 @@ A three-tier font system ensures optimal readability and visual hierarchy:
 - **Animation System**: 60fps performance with reduced-motion preference support
 - **Gradient Applications**: Multi-stop gradients for text and background elements
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 src/
@@ -128,7 +128,7 @@ src/
 └── main.jsx              # Application entry point
 ```
 
-## 🎭 Key Sections
+## Key Sections
 
 ### **Navigation Bar**
 - Sticky positioning with scroll-aware transparency
@@ -299,5 +299,3 @@ This project leverages industry-leading open-source technologies and follows mod
 
 **Professional IELTS Education Platform**  
 *Engineered for academic excellence and student success*
-
-**Version**: 1.0.0 | **Last Updated**: September 2025

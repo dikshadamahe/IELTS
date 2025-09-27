@@ -300,7 +300,7 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
                       type="button"
                       variant="outline"
                       onClick={onClose}
-                      className="px-6"
+                      className="px-6 border-gray-300 text-gray-700 bg-white hover:bg-gray-50 hover:text-gray-900"
                     >
                       Cancel
                     </Button>

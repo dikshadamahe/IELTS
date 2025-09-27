@@ -285,16 +285,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For technical inquiries, feature requests, or bug reports, please use the GitHub Issues system or contact the development team.
 
-## Acknowledgments
-
-This project leverages industry-leading open-source technologies and follows modern web development best practices. Special recognition to:
-
-- **React Team** - Component architecture and ecosystem
-- **Vercel** - Vite build tooling and optimization
-- **Tailwind Labs** - Utility-first CSS framework
-- **Framer** - Motion design and animation library
-- **Lucide** - Comprehensive icon system
-
 ---
 
 **Professional IELTS Education Platform**  

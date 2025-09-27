@@ -17,7 +17,10 @@ const Footer = () => {
   return (
     <motion.footer
       id="contact"
-      className="bg-footer-gradient text-white py-12"
+      className="text-white py-12"
+      style={{
+        background: 'linear-gradient(135deg, rgba(26, 43, 109, 0.9) 0%, rgba(16, 18, 20, 0.95) 100%)'
+      }}
       variants={footerVariants}
       initial="hidden"
       whileInView="visible"

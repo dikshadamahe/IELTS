@@ -53,7 +53,10 @@ const Courses = () => {
   return (
     <motion.section
       id="courses"
-      className="py-20 sm:py-28 lg:py-32 bg-cool-gray-light"
+      className="py-20 sm:py-28 lg:py-32"
+      style={{
+        backgroundColor: 'rgba(244, 246, 248, 0.85)'
+      }}
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -72,7 +75,11 @@ const Courses = () => {
           {courses.map((course) => (
             <motion.div
               key={course.title}
-              className="bg-white p-8 rounded-xl shadow-lg border border-border-light hover:shadow-xl hover:shadow-emerald-green/10 transition-all duration-300 flex flex-col"
+              className="p-8 rounded-xl shadow-lg border border-border-light hover:shadow-xl transition-all duration-300 flex flex-col"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                backdropFilter: 'blur(8px)'
+              }}
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
             >

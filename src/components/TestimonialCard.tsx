@@ -27,7 +27,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 }) => {
   return (
     <motion.div
-      className="bg-white p-8 rounded-xl shadow-lg border border-border-light hover:shadow-xl hover:shadow-emerald-green/10 transition-all duration-300 flex flex-col items-center text-center"
+      className="p-8 rounded-xl shadow-lg border border-border-light hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center"
+      style={{
+        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        backdropFilter: 'blur(8px)'
+      }}
       variants={itemVariants}
       whileHover={{ scale: 1.02, y: -5 }}
     >

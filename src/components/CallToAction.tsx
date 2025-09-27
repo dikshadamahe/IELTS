@@ -24,7 +24,10 @@ const CallToAction = () => {
 
   return (
     <motion.section
-      className="py-20 sm:py-28 lg:py-32 bg-hero-gradient text-white relative overflow-hidden"
+      className="py-20 sm:py-28 lg:py-32 text-white relative overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, rgba(26, 43, 109, 0.85) 0%, rgba(16, 18, 20, 0.9) 100%)'
+      }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}

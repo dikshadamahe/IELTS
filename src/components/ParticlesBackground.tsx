@@ -11,7 +11,7 @@ const ParticlesBackground = () => {
   const particlesOptions = {
     background: {
       color: {
-        value: "#0A0A2A", // deep-royal-blue
+        value: "#0A0A2A", // Darker background for better contrast
       },
     },
     fpsLimit: 60,
@@ -46,7 +46,7 @@ const ParticlesBackground = () => {
         color: "#ffffff",
         distance: 150,
         enable: true,
-        opacity: 0.5,
+        opacity: 0.3, // Slightly more subtle lines
         width: 1,
       },
       collisions: {
@@ -64,16 +64,16 @@ const ParticlesBackground = () => {
           enable: true,
           area: 800,
         },
-        value: 80,
+        value: 100, // More particles for better effect
       },
       opacity: {
-        value: 0.5,
+        value: 0.6, // Slightly more visible particles
       },
       shape: {
         type: "circle",
       },
       size: {
-        value: { min: 1, max: 5 },
+        value: { min: 1, max: 4 },
       },
     },
     detectRetina: true,

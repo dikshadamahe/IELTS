@@ -29,7 +29,10 @@ const Hero = () => {
   return (
     <motion.section
       id="home"
-      className="relative bg-hero-gradient text-white py-20 sm:py-28 lg:py-32 overflow-hidden"
+      className="relative py-20 sm:py-28 lg:py-32 overflow-hidden text-white"
+      style={{
+        background: 'linear-gradient(135deg, rgba(26, 43, 109, 0.85) 0%, rgba(16, 18, 20, 0.9) 100%)'
+      }}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -82,7 +85,11 @@ const Hero = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <motion.div
-              className="p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
+              className="p-6 rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(8px)'
+              }}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
             >
@@ -90,7 +97,11 @@ const Hero = () => {
               <p className="text-cool-gray-dark font-medium">Learners Coached</p>
             </motion.div>
             <motion.div
-              className="p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
+              className="p-6 rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(8px)'
+              }}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
             >
@@ -98,7 +109,11 @@ const Hero = () => {
               <p className="text-cool-gray-dark font-medium">Band 7+ Success</p>
             </motion.div>
             <motion.div
-              className="p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
+              className="p-6 rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(8px)'
+              }}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
             >
@@ -106,7 +121,11 @@ const Hero = () => {
               <p className="text-cool-gray-dark font-medium">Learner Rating</p>
             </motion.div>
             <motion.div
-              className="p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/15 transition-all duration-300"
+              className="p-6 rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                backdropFilter: 'blur(8px)'
+              }}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
             >

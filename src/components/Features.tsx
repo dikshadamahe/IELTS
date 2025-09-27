@@ -7,7 +7,7 @@ const features = [
     icon: <Mic className="w-7 h-7" fill="currentColor" />,
     title: "Speaking Practice",
     description:
-      "Engage in real-time speaking sessions with AI-powered feedback to improve your fluency and pronunciation.",
+      "Engage in real-time speaking sessions with expert feedback to improve your fluency and pronunciation.",
   },
   {
     icon: <Headphones className="w-7 h-7" fill="currentColor" />,

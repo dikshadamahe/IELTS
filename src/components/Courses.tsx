@@ -6,22 +6,22 @@ import BookDemoModal from "./BookDemoModal";
 
 const courses = [
   {
-    icon: <BookOpen className="w-8 h-8 text-emerald-green" fill="currentColor" />,
+    icon: <BookOpen className="w-8 h-8 text-white" fill="currentColor" />,
     title: "Comprehensive Reading",
     description: "Master skimming, scanning, and detailed reading techniques to tackle any text with confidence.",
   },
   {
-    icon: <Edit className="w-8 h-8 text-emerald-green" fill="currentColor" />,
+    icon: <Edit className="w-8 h-8 text-white" fill="currentColor" />,
     title: "Academic & General Writing",
     description: "Learn to structure essays, craft compelling arguments, and meet the specific requirements of Task 1 and 2.",
   },
   {
-    icon: <Mic className="w-8 h-8 text-emerald-green" fill="currentColor" />,
+    icon: <Mic className="w-8 h-8 text-white" fill="currentColor" />,
     title: "Fluent Speaking",
     description: "Improve your fluency, pronunciation, and confidence with mock interviews and expert feedback.",
   },
   {
-    icon: <Laptop className="w-8 h-8 text-emerald-green" fill="currentColor" />,
+    icon: <Laptop className="w-8 h-8 text-white" fill="currentColor" />,
     title: "Full Mock Tests",
     description: "Simulate the real test environment to improve your time management and identify areas for improvement.",
   },
@@ -83,8 +83,8 @@ const Courses = () => {
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
             >
-              <div className="bg-cool-gray-light w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-sm">
-                <div className="text-emerald-green">
+              <div className="bg-brand-green w-16 h-16 rounded-full flex items-center justify-center mb-6 shadow-sm">
+                <div className="text-white opacity-100">
                   {course.icon}
                 </div>
               </div>

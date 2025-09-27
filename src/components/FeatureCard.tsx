@@ -37,8 +37,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
         boxShadow: "0px 20px 40px rgba(29, 185, 84, 0.15)",
       }}
     >
-      <div className="flex items-center justify-center h-14 w-14 rounded-full bg-gray-50 mb-4">
-        <div className="text-brand-green opacity-100">
+      <div className="flex items-center justify-center h-14 w-14 rounded-full bg-brand-green mb-4">
+        <div className="text-white opacity-100">
           {icon}
         </div>
       </div>

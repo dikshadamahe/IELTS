@@ -177,6 +177,7 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
+                          aria-describedby="name-help"
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-transparent transition-all bg-white text-charcoal-black opacity-100"
                           placeholder="Enter your full name"
                         />

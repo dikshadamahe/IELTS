@@ -4,25 +4,25 @@ import FeatureCard from "./FeatureCard";
 
 const features = [
   {
-    icon: <Mic />,
+    icon: <Mic className="w-7 h-7" fill="currentColor" />,
     title: "Speaking Practice",
     description:
       "Engage in real-time speaking sessions with AI-powered feedback to improve your fluency and pronunciation.",
   },
   {
-    icon: <Headphones />,
+    icon: <Headphones className="w-7 h-7" fill="currentColor" />,
     title: "Listening Drills",
     description:
       "Sharpen your listening skills with a wide variety of accents and scenarios, mirroring the actual test environment.",
   },
   {
-    icon: <BookOpen />,
+    icon: <BookOpen className="w-7 h-7" fill="currentColor" />,
     title: "Reading & Writing",
     description:
       "Access a vast library of reading materials and get your writing tasks evaluated by our expert mentors.",
   },
   {
-    icon: <Users />,
+    icon: <Users className="w-7 h-7" fill="currentColor" />,
     title: "Mentor Support",
     description:
       "Get personalized guidance and support from our team of experienced IELTS mentors, available 24/7.",

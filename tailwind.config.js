@@ -11,6 +11,7 @@ export default {
         'royal-blue': '#1A2B6D',
         'charcoal-black': '#101214',
         'emerald-green': '#1DB954',
+        'brand-green': '#28a745',
         'golden-amber': '#FFB547',
         
         // Background Colors

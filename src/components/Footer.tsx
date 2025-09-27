@@ -60,10 +60,14 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold">Contact Us</h4>
             <p className="mt-4 text-cool-gray-dark">
-              123 Main Street, Anytown, USA
+              G206, Girls Hostel Block 2,
+              <br />
+              VIT Bhopal University, M.P.
+              <br />
+              466114
             </p>
             <p className="text-cool-gray-dark">Email: info@ieltsprecision.com</p>
-            <p className="text-cool-gray-dark">Phone: (123) 456-7890</p>
+            <p className="text-cool-gray-dark">Phone: +91123456789</p>
           </div>
           <div>
             <h4 className="text-lg font-semibold">Follow Us</h4>

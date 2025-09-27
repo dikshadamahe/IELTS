@@ -105,7 +105,7 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 min-h-screen"
           variants={backdropVariants}
           initial="hidden"
           animate="visible"
@@ -119,44 +119,32 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
           
           {/* Modal */}
           <motion.div
-            className="relative rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden border border-white/20"
-            style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.85)',
-              backdropFilter: 'blur(8px)'
-            }}
+            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden border border-gray-200"
             variants={modalVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
           >
             {/* Header */}
-            <div 
-              className="text-white p-6 relative overflow-hidden"
-              style={{
-                background: 'linear-gradient(135deg, rgba(26, 43, 109, 0.95) 0%, rgba(16, 18, 20, 0.98) 100%)',
-                backdropFilter: 'blur(10px)'
-              }}
-            >
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-green to-transparent"></div>
-              </div>
+            <div className="bg-gradient-to-r from-brand-green to-emerald-green text-white p-6 relative overflow-hidden">
               <div className="relative flex items-center justify-between">
                 <div>
-                  <h2 className="text-2xl font-bold mb-2 text-white opacity-100">Book Your Free Demo</h2>
-                  <p className="text-cool-gray-dark opacity-100">
+                  <h2 className="text-2xl font-bold mb-2 text-white">Book Your Free Demo</h2>
+                  <p className="text-white/90">
                     Get personalized guidance from our IELTS experts
                   </p>
                 </div>
                 <button
                   onClick={onClose}
-                  className="text-white hover:text-cool-gray-dark transition-colors opacity-100"
+                  className="text-white hover:text-white/80 transition-colors p-1 rounded-full hover:bg-white/10"
+                  aria-label="Close modal"
                 >
                   <X size={24} />
                 </button>
               </div>
             </div>
 
-            <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
+            <div className="p-8 overflow-y-auto max-h-[calc(90vh-160px)] bg-white">
               {!isSubmitted ? (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}

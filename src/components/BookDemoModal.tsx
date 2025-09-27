@@ -119,27 +119,37 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
           
           {/* Modal */}
           <motion.div
-            className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden"
+            className="relative rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden border border-white/20"
+            style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.85)',
+              backdropFilter: 'blur(8px)'
+            }}
             variants={modalVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
           >
             {/* Header */}
-            <div className="bg-deep-royal-blue text-white p-6 relative overflow-hidden">
+            <div 
+              className="text-white p-6 relative overflow-hidden"
+              style={{
+                background: 'linear-gradient(135deg, rgba(26, 43, 109, 0.95) 0%, rgba(16, 18, 20, 0.98) 100%)',
+                backdropFilter: 'blur(10px)'
+              }}
+            >
               <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-vibrant-emerald-green to-transparent"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-emerald-green to-transparent"></div>
               </div>
               <div className="relative flex items-center justify-between">
                 <div>
-                  <h2 className="text-2xl font-bold mb-2">Book Your Free Demo</h2>
-                  <p className="text-cool-gray-light">
+                  <h2 className="text-2xl font-bold mb-2 text-white opacity-100">Book Your Free Demo</h2>
+                  <p className="text-cool-gray-dark opacity-100">
                     Get personalized guidance from our IELTS experts
                   </p>
                 </div>
                 <button
                   onClick={onClose}
-                  className="text-white hover:text-cool-gray-light transition-colors"
+                  className="text-white hover:text-cool-gray-dark transition-colors opacity-100"
                 >
                   <X size={24} />
                 </button>
@@ -151,14 +161,14 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
                   <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-deep-royal-blue flex items-center">
+                    <h3 className="text-lg font-semibold text-charcoal-black flex items-center opacity-100">
                       <User className="w-5 h-5 mr-2" />
                       Personal Information
                     </h3>
                     
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-charcoal-black mb-2">
+                        <label className="block text-sm font-medium text-charcoal-black mb-2 opacity-100">
                           Full Name *
                         </label>
                         <input
@@ -167,13 +177,13 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vibrant-emerald-green focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-transparent transition-all bg-white text-charcoal-black opacity-100"
                           placeholder="Enter your full name"
                         />
                       </div>
                       
                       <div>
-                        <label className="block text-sm font-medium text-charcoal-black mb-2">
+                        <label className="block text-sm font-medium text-charcoal-black mb-2 opacity-100">
                           Email Address *
                         </label>
                         <input
@@ -182,14 +192,14 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vibrant-emerald-green focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-transparent transition-all bg-white text-charcoal-black opacity-100"
                           placeholder="Enter your email"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-sm font-medium text-charcoal-black mb-2">
+                      <label className="block text-sm font-medium text-charcoal-black mb-2 opacity-100">
                         Phone Number *
                       </label>
                       <input
@@ -198,7 +208,7 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vibrant-emerald-green focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-transparent transition-all bg-white text-charcoal-black opacity-100"
                         placeholder="Enter your phone number"
                       />
                     </div>
@@ -206,14 +216,14 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
 
                   {/* IELTS Information */}
                   <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-deep-royal-blue flex items-center">
+                    <h3 className="text-lg font-semibold text-charcoal-black flex items-center opacity-100">
                       <Target className="w-5 h-5 mr-2" />
                       IELTS Goals
                     </h3>
                     
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-charcoal-black mb-2">
+                        <label className="block text-sm font-medium text-charcoal-black mb-2 opacity-100">
                           Target Band Score *
                         </label>
                         <select
@@ -221,7 +231,7 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
                           value={formData.targetScore}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vibrant-emerald-green focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-transparent transition-all bg-white text-charcoal-black opacity-100"
                         >
                           <option value="">Select target score</option>
                           <option value="6.0">6.0</option>
@@ -235,14 +245,14 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
                       </div>
                       
                       <div>
-                        <label className="block text-sm font-medium text-charcoal-black mb-2">
+                        <label className="block text-sm font-medium text-charcoal-black mb-2 opacity-100">
                           Current Level
                         </label>
                         <select
                           name="currentLevel"
                           value={formData.currentLevel}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vibrant-emerald-green focus:border-transparent transition-all"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-transparent transition-all bg-white text-charcoal-black opacity-100"
                         >
                           <option value="">Select current level</option>
                           <option value="Beginner">Beginner (4.0-5.0)</option>
@@ -256,21 +266,21 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
 
                   {/* Schedule */}
                   <div className="space-y-4">
-                    <h3 className="text-lg font-semibold text-deep-royal-blue flex items-center">
+                    <h3 className="text-lg font-semibold text-charcoal-black flex items-center opacity-100">
                       <Calendar className="w-5 h-5 mr-2" />
                       Preferred Demo Time
                     </h3>
                     
-                    <div>
-                      <label className="block text-sm font-medium text-charcoal-black mb-2">
-                        Best Time to Reach You
-                      </label>
-                      <select
-                        name="preferredTime"
-                        value={formData.preferredTime}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vibrant-emerald-green focus:border-transparent transition-all"
-                      >
+                      <div>
+                        <label className="block text-sm font-medium text-charcoal-black mb-2 opacity-100">
+                          Best Time to Reach You
+                        </label>
+                        <select
+                          name="preferredTime"
+                          value={formData.preferredTime}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-transparent transition-all bg-white text-charcoal-black opacity-100"
+                        >
                         <option value="">Select preferred time</option>
                         <option value="Morning (9AM-12PM)">Morning (9AM-12PM)</option>
                         <option value="Afternoon (12PM-5PM)">Afternoon (12PM-5PM)</option>
@@ -282,7 +292,7 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
 
                   {/* Additional Message */}
                   <div>
-                    <label className="block text-sm font-medium text-charcoal-black mb-2">
+                    <label className="block text-sm font-medium text-charcoal-black mb-2 opacity-100">
                       Additional Message (Optional)
                     </label>
                     <textarea
@@ -290,7 +300,7 @@ const BookDemoModal = ({ isOpen, onClose }: BookDemoModalProps) => {
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={3}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vibrant-emerald-green focus:border-transparent transition-all resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-green focus:border-transparent transition-all resize-none bg-white text-charcoal-black opacity-100"
                       placeholder="Tell us about your IELTS preparation goals or any specific areas you'd like to focus on..."
                     />
                   </div>

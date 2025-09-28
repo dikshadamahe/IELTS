@@ -1,5 +1,7 @@
 # IELTS Precision & Progress
 
+🚀 **[Live Demo](https://ielts-nu.vercel.app/)** | 📂 **[GitHub Repository](https://github.com/your-username/ielts-precision-progress)**
+
 A comprehensive, enterprise-grade landing page application for IELTS preparation services, built with modern web technologies. This professional platform implements the **Precision & Progress** design system to deliver exceptional user experience through sophisticated animations, interactive components, and conversion-optimized interface design.
 
 ## Overview

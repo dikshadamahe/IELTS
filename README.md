@@ -50,31 +50,23 @@ This application serves as a complete digital solution for IELTS institutes, pro
 2. **Install dependencies**
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 3. **Start development server**
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
    The application will be available at `http://localhost:5173`
 
 4. **Build for production**
    ```bash
    npm run build
-   # or
-   yarn build
    ```
    Production files will be generated in the `dist/` directory
 
 5. **Preview production build**
    ```bash
    npm run preview
-   # or
-   yarn preview
    ```
    Preview the production build at `http://localhost:4173`
 
